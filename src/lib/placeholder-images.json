@@ -1,3 +1,52 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "hero-image",
+      "description": "A compassionate caregiver assisting an elderly person at home.",
+      "imageUrl": "https://images.unsplash.com/photo-1763631019224-07719a29f76e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjYXJlZ2l2ZXIlMjBlbGRlcmx5fGVufDB8fHx8MTc2NDk3MzYxNnww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "caregiver elderly"
+    },
+    {
+      "id": "founder-image",
+      "description": "Portrait of the founder of Hoca-africa.",
+      "imageUrl": "https://images.unsplash.com/photo-1750926013613-13c1796133e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxmb3VuZGVyJTIwcG9ydHJhaXR8ZW58MHx8fHwxNzY1MDEzMDkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "founder portrait"
+    },
+    {
+      "id": "testimonial-1-avatar",
+      "description": "Avatar for the first testimonial.",
+      "imageUrl": "https://images.unsplash.com/photo-1641288883869-c463bc6c2a58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw1fHxwZXJzb24lMjBhdmF0YXJ8ZW58MHx8fHwxNzY0OTMwNTQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person avatar"
+    },
+    {
+      "id": "testimonial-2-avatar",
+      "description": "Avatar for the second testimonial.",
+      "imageUrl": "https://images.unsplash.com/photo-1639149888905-fb39731f2e6c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHxwZXJzb24lMjBhdmF0YXJ8ZW58MHx8fHwxNzY0OTMwNTQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person avatar"
+    },
+    {
+      "id": "testimonial-3-avatar",
+      "description": "Avatar for the third testimonial.",
+      "imageUrl": "https://images.unsplash.com/photo-1640951613773-54706e06851d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwZXJzb24lMjBhdmF0YXJ8ZW58MHx8fHwxNzY0OTMwNTQxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "person avatar"
+    },
+    {
+      "id": "service-personal-care",
+      "description": "Image representing personal care.",
+      "imageUrl": "https://images.unsplash.com/photo-1596755389378-c31d21fd1273?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw3fHxwZXJzb25hbCUyMGNhcmV8ZW58MHx8fHwxNzY1MDEzMDkzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "personal care"
+    },
+    {
+      "id": "service-companionship",
+      "description": "Image representing companionship.",
+      "imageUrl": "https://images.unsplash.com/photo-1661603955760-b0d7c5438232?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxjb21wYW5pb25zaGlwJTIwZnJpZW5kc2hpcHxlbnwwfHx8fDE3NjUwMTMwOTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "companionship friendship"
+    },
+    {
+      "id": "service-skilled-nursing",
+      "description": "Image representing skilled nursing.",
+      "imageUrl": "https://images.unsplash.com/photo-1548425083-4261538dbca4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxza2lsbGVkJTIwbnVyc2luZ3xlbnwwfHx8fDE3NjUwMTMwOTN8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "skilled nursing"
+    }
+  ]
 }
