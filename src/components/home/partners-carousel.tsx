@@ -17,15 +17,12 @@ const partners = [
   { name: "LifeWell Partners", icon: <Heart className="h-12 w-12 text-muted-foreground" /> },
 ];
 
-export function PartnersCarousel() {
+const PartnersCarousel = () => {
   return (
-    <section id="partners" className="py-16 sm:py-24 bg-secondary">
+    <section id="partners" className="py-6 sm:py-4 bg-secondary">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline">Our Valued Partners</h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            We collaborate with leading organizations to provide comprehensive care.
-          </p>
+          <p className="text-xl font-semibold font-headline">Our Valued Partners</p>
         </div>
         <Carousel
           opts={{
@@ -55,3 +52,4 @@ export function PartnersCarousel() {
     </section>
   );
 }
+export default PartnersCarousel;

@@ -29,8 +29,8 @@ export function WhyChooseUs() {
     <section id="why-choose-us" className="py-16 sm:py-24 bg-background">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline">Why Choose Hoca-africa?</h2>
-          <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+          <h2 className="text-lg font-semibold font-headline">WHY CHOOSE US</h2>
+          <p className="mt-4 text-2xl text-muted-foreground max-w-3xl mx-auto">
             We are committed to providing the highest quality of care, ensuring the well-being and happiness of your loved ones.
           </p>
         </div>

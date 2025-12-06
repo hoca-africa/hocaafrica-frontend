@@ -27,8 +27,8 @@ const LandingPage = () => {
       <div className="absolute inset-0 bg-black/20" />
       <div className="relative z-10 container mx-auto flex flex-col items-start justify-center h-full text-white">
         <div className="max-w-2xl">
-          <h1 className="text-4xl md:text-6xl font-bold !leading-none mb-6 font-headline">
-            Transforming Elder Care Across Africa
+          <h1 className="text-4xl md:text-6xl font-bold  mb-6 font-headline !leading-normal">
+            Transforming Elder  Care Across Africa
           </h1>
           <div className="w-[75%] mb-16 ">
             <p className="text-lg text-slate-200 animate-fade-in-up">
