@@ -1,4 +1,4 @@
-import { HeroSection } from '@/components/home/hero-section';
+import LandingPage from '@/components/home/landingpage';
 import { WhyChooseUs } from '@/components/home/why-choose-us';
 import { OurServicesPreview } from '@/components/home/our-services-preview';
 import { FoundersStory } from '@/components/home/founders-story';
@@ -8,7 +8,7 @@ import { PartnersCarousel } from '@/components/home/partners-carousel';
 export default function Home() {
   return (
     <div className="flex flex-col">
-      <HeroSection />
+      <LandingPage />
       <OurServicesPreview />
       <WhyChooseUs />
       <FoundersStory />

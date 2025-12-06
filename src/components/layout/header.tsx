@@ -1,7 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { Heart, Menu, ChevronDown, ChevronUp } from "lucide-react";
+import Image from "next/image";
+import { Menu, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -11,6 +12,7 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { useState } from "react";
+import LogoImg from "../../assets/images/logos/logo_hocaa.png";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -28,17 +30,18 @@ const navLinks = [
   { href: "/contact", label: "Contact Us" },
 ];
 
-export function Header() {
+const HeaderPage = () => {
   const [isSheetOpen, setSheetOpen] = useState(false);
   const [isAboutUsOpen, setAboutUsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <div className="container flex h-16 items-center">
-        <Link href="/" className="flex items-center space-x-2">
-          <Heart className="h-6 w-6 text-primary" />
-          <span className="font-bold inline-block font-headline">Hoca-africa</span>
-        </Link>
+    <header className="sticky top-0 z-50 w-full bg-[#8B0000] backdrop-blur shadow-md">
+      <div className="container flex h-20 items-center">
+        <div className="flex justify-end flex-initial w-64">
+          <Link href="/" >
+            <Image className="h-12 w-28" src={LogoImg} alt="logo-image" />
+          </Link>
+        </div>
         <div className="flex flex-1 items-center justify-end space-x-4">
           <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
             {navLinks.map((link) =>
@@ -49,7 +52,7 @@ export function Header() {
                   onOpenChange={setAboutUsOpen}
                 >
                   <DropdownMenuTrigger
-                    className="flex items-center gap-1 outline-none"
+                    className="flex items-center gap-1 outline-none text-white font-semibold transition-colors"
                     onPointerEnter={() => setAboutUsOpen(true)}
                     onPointerLeave={() => setAboutUsOpen(false)}
                   >
@@ -75,7 +78,7 @@ export function Header() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="transition-colors hover:text-foreground/80 text-foreground/60"
+                  className="transition-colors text-white font-semibold"
                 >
                   {link.label}
                 </Link>
@@ -83,11 +86,11 @@ export function Header() {
             )}
           </nav>
           <Button asChild>
-            <Link href="/join-us">Join Us</Link>
+            <Link href="/join-us" className="font-semibold">Join Us</Link>
           </Button>
           <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
+              <Button variant="ghost" size="icon" className="md:hidden text-white">
                 <Menu className="h-5 w-5" />
                 <span className="sr-only">Toggle Menu</span>
               </Button>
@@ -98,8 +101,7 @@ export function Header() {
                 className="flex items-center space-x-2 mb-6"
                 onClick={() => setSheetOpen(false)}
               >
-                <Heart className="h-6 w-6 text-primary" />
-                <span className="font-bold">Hoca-africa</span>
+                <Image className="h-12 w-28" src={LogoImg} alt="logo-image" />
               </Link>
               <div className="flex flex-col space-y-4">
                 {navLinks.map((link) => (
@@ -136,4 +138,5 @@ export function Header() {
       </div>
     </header>
   );
-}
+};
+export default HeaderPage;
