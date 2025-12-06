@@ -1,11 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import {
-  Heart,
-  Menu,
-  ChevronDown,
-} from "lucide-react";
+import { Heart, Menu, ChevronDown, ChevronUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -34,42 +30,58 @@ const navLinks = [
 
 export function Header() {
   const [isSheetOpen, setSheetOpen] = useState(false);
+  const [isAboutUsOpen, setAboutUsOpen] = useState(false);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-16 items-center">
-        <Link href="/" className="mr-6 flex items-center space-x-2">
+        <Link href="/" className="flex items-center space-x-2">
           <Heart className="h-6 w-6 text-primary" />
           <span className="font-bold inline-block font-headline">Hoca-africa</span>
         </Link>
-        <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
-          {navLinks.map((link) =>
-            link.sublinks ? (
-              <DropdownMenu key={link.label}>
-                <DropdownMenuTrigger className="flex items-center gap-1 outline-none">
-                  {link.label}
-                  <ChevronDown className="h-4 w-4" />
-                </DropdownMenuTrigger>
-                <DropdownMenuContent>
-                  {link.sublinks.map((sublink) => (
-                    <DropdownMenuItem key={sublink.label} asChild>
-                      <Link href={sublink.href}>{sublink.label}</Link>
-                    </DropdownMenuItem>
-                  ))}
-                </DropdownMenuContent>
-              </DropdownMenu>
-            ) : (
-              <Link
-                key={link.href}
-                href={link.href}
-                className="transition-colors hover:text-foreground/80 text-foreground/60"
-              >
-                {link.label}
-              </Link>
-            )
-          )}
-        </nav>
         <div className="flex flex-1 items-center justify-end space-x-4">
+          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+            {navLinks.map((link) =>
+              link.sublinks ? (
+                <DropdownMenu
+                  key={link.label}
+                  open={isAboutUsOpen}
+                  onOpenChange={setAboutUsOpen}
+                >
+                  <DropdownMenuTrigger
+                    className="flex items-center gap-1 outline-none"
+                    onPointerEnter={() => setAboutUsOpen(true)}
+                    onPointerLeave={() => setAboutUsOpen(false)}
+                  >
+                    {link.label}
+                    {isAboutUsOpen ? (
+                      <ChevronUp className="h-4 w-4" />
+                    ) : (
+                      <ChevronDown className="h-4 w-4" />
+                    )}
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent
+                    onPointerEnter={() => setAboutUsOpen(true)}
+                    onPointerLeave={() => setAboutUsOpen(false)}
+                  >
+                    {link.sublinks.map((sublink) => (
+                      <DropdownMenuItem key={sublink.label} asChild>
+                        <Link href={sublink.href}>{sublink.label}</Link>
+                      </DropdownMenuItem>
+                    ))}
+                  </DropdownMenuContent>
+                </DropdownMenu>
+              ) : (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="transition-colors hover:text-foreground/80 text-foreground/60"
+                >
+                  {link.label}
+                </Link>
+              )
+            )}
+          </nav>
           <Button asChild>
             <Link href="/join-us">Join Us</Link>
           </Button>

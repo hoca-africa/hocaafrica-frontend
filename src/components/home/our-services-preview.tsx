@@ -35,7 +35,7 @@ export function OurServicesPreview() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {services.map((service) => (
-            <Card key={service.title} className="overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+            <Card key={service.title} className="overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-background">
               {service.image && (
                 <div className="relative h-48 w-full">
                   <Image
