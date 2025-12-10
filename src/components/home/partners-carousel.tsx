@@ -1,55 +1,59 @@
-import { Card, CardContent } from "@/components/ui/card";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import { Heart, Hospital, Stethoscope, Users } from "lucide-react";
+"use client";
+
+import Image from "next/image";
+import EdgelifeLogo from '../../assets/images/logos/edgelife.png';
+import MyriaLogo from '../../assets/images/logos/myriadusa.png';
+import MinistrLogo from '../../assets/images/logos/ugandaministr.png';
+import VintageLogo from '../../assets/images/logos/vintage.png';
+import TrustedLogo from '../../assets/images/logos/trusted.png';
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const partners = [
-  { name: "Global Health Inc.", icon: <Hospital className="h-12 w-12 text-muted-foreground" /> },
-  { name: "Wellness Foundation", icon: <Heart className="h-12 w-12 text-muted-foreground" /> },
-  { name: "Senior Support Services", icon: <Users className="h-12 w-12 text-muted-foreground" /> },
-  { name: "Medical Pro Group", icon: <Stethoscope className="h-12 w-12 text-muted-foreground" /> },
-  { name: "Community Care Network", icon: <Hospital className="h-12 w-12 text-muted-foreground" /> },
-  { name: "LifeWell Partners", icon: <Heart className="h-12 w-12 text-muted-foreground" /> },
+  { name: "Vintagecare", image: VintageLogo },
+  { name: "My Trusted Companion Inc.", image: TrustedLogo },
+  { name: "EdgeLife", image: EdgelifeLogo },
+  { name: "Ministry of Education", image: MinistrLogo },
+  { name: "Myriad USA", image: MyriaLogo },
 ];
 
 const PartnersCarousel = () => {
+
+  const settings = {
+    dots: false,
+    infinite: true,
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    autoplay: true,
+    speed: 5000,
+    autoplaySpeed: 100,
+    cssEase: "linear"
+  };
+
   return (
-    <section id="partners" className="py-6 sm:py-4 bg-secondary">
+    <section id="partners" className="py-2 sm:py-4 bg-[#EFF3ED90]"
+    >
       <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <p className="text-xl font-semibold font-headline">Our Valued Partners</p>
+        <div className=" mb-4">
+          <h1 className="text-2xl text-[#030229]">Thank You to Our Partners</h1>
         </div>
-        <Carousel
-          opts={{
-            align: "start",
-            loop: true,
-          }}
-          className="w-full max-w-5xl mx-auto"
-        >
-          <CarouselContent>
+        <div className="slider-container">
+          <Slider {...settings}>
             {partners.map((partner, index) => (
-              <CarouselItem key={index} className="md:basis-1/3 lg:basis-1/4">
-                <div className="p-1">
-                  <Card className="bg-background">
-                    <CardContent className="flex flex-col items-center justify-center p-6 aspect-square">
-                      {partner.icon}
-                      <span className="text-sm font-medium text-center mt-4">{partner.name}</span>
-                    </CardContent>
-                  </Card>
-                </div>
-              </CarouselItem>
+              <div className="max-w-[25rem] max-h-[7rem] mx-auto py-4 flex items-center justify-center">
+                <Image
+                  src={partner.image}
+                  alt={partner.name}
+                  width={200}
+                  height={100}
+                />
+              </div>
             ))}
-          </CarouselContent>
-          <CarouselPrevious />
-          <CarouselNext />
-        </Carousel>
+          </Slider>
+        </div>
       </div>
-    </section>
+    </section >
   );
 }
 export default PartnersCarousel;
