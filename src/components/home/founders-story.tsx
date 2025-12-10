@@ -14,19 +14,6 @@ const FoundersStory = () => {
     <section className="py-16 sm:py-24 bg-secondary">
       <div className="container mx-auto">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="flex justify-center ">
-            {founderImage && (
-              <div className="border-l-[20px] border-[#FFD700] bg-[#8B0000] relative w-[300px] h-[300px] md:w-[600px] md:h-[500px] rounded-full p-4 overflow-hidden shadow-2xl">
-                <Image
-                  src={MotherImg}
-                  alt={founderImage.description}
-                  fill
-                  className="object-contain"
-                  data-ai-hint={founderImage.imageHint}
-                />
-              </div>
-            )}
-          </div>
           <div className="text-center lg:text-left">
             <h2 className="text-lg font-semibold mb-4 font-headline">
               Founder's Story
@@ -60,6 +47,19 @@ const FoundersStory = () => {
 
               </CardContent>
             </Card>
+          </div>
+          <div className="flex justify-center ">
+            {founderImage && (
+              <div className="border-r-[20px] border-[#FFD700] bg-[#8B0000] relative w-[300px] h-[300px] md:w-[600px] md:h-[400px] rounded-full p-4 overflow-hidden shadow-2xl">
+                <Image
+                  src={MotherImg}
+                  alt={founderImage.description}
+                  fill
+                  className="object-contain"
+                  data-ai-hint={founderImage.imageHint}
+                />
+              </div>
+            )}
           </div>
         </div>
       </div>
