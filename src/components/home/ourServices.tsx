@@ -40,7 +40,7 @@ const services = [
 const OurServicesPreview = () => {
   return (
     <section
-      className="py-16 sm:py-24 bg-background text-[#030229]"
+      className="py-16 sm:py-24 bg-background text-[#030229]" style={{ paddingTop: '10rem' }}
       id="services"
     >
       <div className="container mx-auto">

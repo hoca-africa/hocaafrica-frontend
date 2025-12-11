@@ -16,6 +16,7 @@ import {
     FaUsers,
 } from "react-icons/fa";
 import { GoArrowLeft, GoArrowRight, GoArrowUpRight } from "react-icons/go";
+import FoundersStory from "./founders-story";
 
 const ProblemPage: React.FC = () => {
     // Custom Arrow Components
@@ -23,7 +24,7 @@ const ProblemPage: React.FC = () => {
         const { className, style, onClick } = props;
         return (
             <button
-                className="absolute left-[-50px] top-[60%] -translate-y-1/2 z-10 bg-[#8B0000] bg-opacity-5 text-[#8B0000] rounded-full p-2 transition-all duration-300 transform hover:scale-110 focus:outline-none"
+                className="hidden  lg:block absolute left-[-50px] top-[60%] -translate-y-1/2 z-10 bg-[#8B0000] bg-opacity-5 text-[#8B0000] rounded-full p-2 transition-all duration-300 transform hover:scale-110 focus:outline-none"
                 style={style}
                 onClick={onClick}
                 aria-label="Previous slide"
@@ -37,7 +38,7 @@ const ProblemPage: React.FC = () => {
         const { className, style, onClick } = props;
         return (
             <button
-                className="absolute right-[-60px] top-[60%] -translate-y-1/2 z-10 bg-[#8B0000] bg-opacity-5 text-[#8B0000] rounded-full p-2 transition-all duration-300 transform hover:scale-110 focus:outline-none"
+                className="hidden  lg:block absolute right-[-60px] top-[60%] -translate-y-1/2 z-10 bg-[#8B0000] bg-opacity-5 text-[#8B0000] rounded-full p-2 transition-all duration-300 transform hover:scale-110 focus:outline-none"
                 style={style}
                 onClick={onClick}
                 aria-label="Next slide"
@@ -63,7 +64,7 @@ const ProblemPage: React.FC = () => {
                     slidesToShow: 3,
                     slidesToScroll: 3,
                     infinite: true,
-                    dots: true,
+                    dots: false,
                 },
             },
             {
@@ -141,7 +142,7 @@ const ProblemPage: React.FC = () => {
         },
     ];
     return (
-        <section className="py-16 sm:py-24 bg-[#EFF3ED]">
+        <section className="py-16 sm:py-24 bg-[#EFF3ED] relative min-h-screen">
             <style>{`
                 .slider-container .slick-prev,
                 .slider-container .slick-next {
@@ -152,35 +153,40 @@ const ProblemPage: React.FC = () => {
                     position: relative;
                 }
             `}</style>
-            <div className="container mx-auto flex gap-2">
-                <div className="mt-8 text-[2.5rem] text-[#030229] max-w-[35rem]">
-                    <h1>What Africa’s Elders Are Facing ...</h1>
-                    <a href="#services" className="cta-button1 mt-12">
-                        <span>Our Solutions</span>
-                        <span className="arrow">
-                            <GoArrowUpRight size={24} />
-                        </span>
-                    </a>
-                </div>
-                <div className="max-w-[55rem] slider-container">
-                    <Slider {...settings}>
-                        {challenges.map((challenge, index) => (
-                            <div
-                                key={index}
-                                className="p-4u pl-[3rem] border-r-[1px] border-[#030229]  border-opacity-10  h-[15rem]"
-                            >
-                                <div className="w-12 h-12 rounded-full bg-[#8B0000] p-3 text-white flex items-center justify-center mb-6">
-                                    {challenge.icon}
+            <div className="container mx-auto">
+                <div className="flex flex-col lg:flex-row gap-2">
+                    <div className="mt-8 text-[2.5rem] text-[#030229] max-w-[35rem]">
+                        <h1>What Africa’s Elders Are Facing ...</h1>
+                    </div>
+                    <div className="max-w-[55rem] slider-container">
+                        <Slider {...settings}>
+                            {challenges.map((challenge, index) => (
+                                <div
+                                    key={index}
+                                    className="pl-[3rem] border-r-[1px] border-[#030229]  border-opacity-10  h-[15rem]"
+                                >
+                                    <div className="w-12 h-12 rounded-full bg-[#8B0000] p-3 text-white flex items-center justify-center mb-6">
+                                        {challenge.icon}
+                                    </div>
+                                    <h3 className="text-2xl text-[#030229] font-semibold">
+                                        {challenge.title}
+                                    </h3>
+                                    <p className="mt-2 text-[#030229] opacity-70">
+                                        {challenge.description}
+                                    </p>
                                 </div>
-                                <h3 className="text-2xl text-[#030229] font-semibold">
-                                    {challenge.title}
-                                </h3>
-                                <p className="mt-2 text-[#030229] opacity-70">
-                                    {challenge.description}
-                                </p>
-                            </div>
-                        ))}
-                    </Slider>
+                            ))}
+                        </Slider>
+                    </div>
+                </div>
+                <a href="#services" className="cta-button1">
+                    <span>Our Solutions</span>
+                    <span className="arrow">
+                        <GoArrowUpRight size={24} />
+                    </span>
+                </a>
+                <div className="absolute top-[50%] z-9999 hidden lg:block">
+                    <FoundersStory />
                 </div>
             </div>
         </section>

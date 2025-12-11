@@ -1,6 +1,5 @@
 import { WhyChooseUs } from '@/components/home/why-choose-us';
 import OurServicesPreview from '@/components/home/ourServices';
-import FoundersStory from '@/components/home/founders-story';
 import { Testimonials } from '@/components/home/testimonials';
 import PartnersCarousel from '@/components/home/partners-carousel';
 import LandingPage from '@/components/home/landingpage/page';
@@ -14,7 +13,6 @@ export default function Home() {
       <OurServicesPreview />
       <PartnersCarousel />
       <WhyChooseUs />
-      <FoundersStory />
       <Testimonials />
     </div>
   );
