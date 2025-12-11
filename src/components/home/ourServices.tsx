@@ -75,7 +75,7 @@ const OurServicesPreview = () => {
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground text-base">
+                <p className="text-muted-foreground text-lg">
                   {service.description}
                 </p>
               </CardContent>

@@ -41,7 +41,7 @@ const HeaderPage = () => {
         <div className="nav-container">
           <div className="logo">
             <Link href="/">
-              <Image className="h-12 w-[10em]" src={LogoImg} alt="logo-image" />
+              <Image className="h-12 w-[9em]" src={LogoImg} alt="logo-image" />
             </Link>
           </div>
           <ul className="nav-links hidden md:flex">

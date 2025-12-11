@@ -72,7 +72,7 @@ export function Testimonials() {
                   <h3 className="text-2xl text-[#030229] font-semibold">
                     {challenge.name}
                   </h3>
-                  <p className="mt-2 text-[#030229] opacity-70 text-xl">
+                  <p className="mt-2 text-[#030229] opacity-70 text-lg">
                     {challenge.text}
                   </p>
                 </div>
