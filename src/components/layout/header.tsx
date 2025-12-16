@@ -1,150 +1,248 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import Image from "next/image";
-import { Heart, Menu, ChevronDown, ChevronUp } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { useState } from "react";
-import "./header.css";
+import React, { useState } from 'react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { X, Menu } from 'lucide-react';
 import LogoImg from "../../assets/images/logos/logo_hocaa.png";
+import "./header.css";
+import { TiArrowSortedDown } from "react-icons/ti";
 
-const navLinks = [
-  { href: "/", label: "Home" },
-  {
-    label: "About Us",
-    sublinks: [
-      { href: "/about#who-we-are", label: "Who We Are" },
-      { href: "/about#what-we-do", label: "What We Do" },
-      { href: "/about#our-team", label: "Our Team" },
-      { href: "/#partners", label: "Our Partners" },
-    ],
-  },
-  { href: "/services", label: "Our Services" },
-  { href: "/blog", label: "Blog" },
-  { href: "/contact", label: "Contact Us" },
-];
+export default function Navbar() {
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-const HeaderPage = () => {
-  const [isSheetOpen, setSheetOpen] = useState(false);
-  const [isAboutUsOpen, setAboutUsOpen] = useState(false);
+  const toggleDropdown = (menu: string) => {
+    setOpenDropdown(openDropdown === menu ? null : menu);
+  };
+
+  const aboutUsMenuItems = [
+    { label: 'Who we are', href: '/about#who-we-are' },
+    { label: 'Our team', href: '/about/#our-team' },
+    { label: 'our journey', href: 'our-journey' },
+  ];
+
+  const servicesMenuItems = [
+    { label: 'Hospitality', href: '/services/hospitality' },
+    { label: 'Trainings', href: '/services/trainings' },
+  ];
+  const blogMenuItems = [
+    { label: 'Newsroom', href: '/services/hospitality' },
+    { label: 'Events', href: '/services/trainings' },
+  ];
 
   return (
-    <>
-      <nav>
-        <div className="nav-container">
+    <nav className="sticky top-0 z-50 w-full bg-white border-b border-gray-200 shadow-sm text-[#030229]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16">
+          {/* Logo */}
           <div className="logo">
             <Link href="/">
-              <Image className="h-12 w-[9em]" src={LogoImg} alt="logo-image" />
+              <Image className="h-12 w-[8em]" src={LogoImg} alt="logo-image" />
             </Link>
           </div>
-          <ul className="nav-links hidden md:flex">
-            {navLinks.map((link) =>
-              link.sublinks ? (
-                <li key={link.label}>
-                  <DropdownMenu
-                    open={isAboutUsOpen}
-                    onOpenChange={setAboutUsOpen}
+
+          {/* Desktop Menu */}
+          <div className="hidden md:flex items-center gap-8">
+            {/* Home */}
+            <Link
+              href="/"
+              className="hover:text-[#8B0000] transition-colors font-medium text-sm"
+            >
+              Home
+            </Link>
+
+            {/* About Us Dropdown */}
+            <div className="relative group">
+              <Link
+                href="/about"
+                className="flex items-center gap-1  hover:text-[#8B0000] transition-colors font-medium text-sm group/about"
+              >
+                About Us
+                <TiArrowSortedDown
+                  size={16}
+                  className="transition-transform"
+                />
+              </Link>
+
+              {/* Dropdown Menu */}
+              <div className="absolute left-0 mt-6 w-48 p-2 bg-white rounded-lg shadow-lg opacity-0 invisible  group-hover:opacity-100 group-hover:visible transition-all duration-300 py-2">
+                {aboutUsMenuItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="block px-4 py-2 hover:bg-[#EFF3ED60] hover:text-[#8B0000] transition-colors text-sm rounded-lg"
                   >
-                    <DropdownMenuTrigger
-                      className="flex items-center gap-1 outline-none"
-                      onPointerEnter={() => setAboutUsOpen(true)}
-                      onPointerLeave={() => setAboutUsOpen(false)}
-                      asChild
-                    >
-                      <Link href="/about" className="flex items-center">
-                        {link.label}
-                        {isAboutUsOpen ? (
-                          <ChevronUp className="h-4 w-4" />
-                        ) : (
-                          <ChevronDown className="h-4 w-4" />
-                        )}
-                      </Link>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent
-                      onPointerEnter={() => setAboutUsOpen(true)}
-                      onPointerLeave={() => setAboutUsOpen(false)}
-                    >
-                      {link.sublinks.map((sublink) => (
-                        <DropdownMenuItem key={sublink.label} asChild>
-                          <Link href={sublink.href}>{sublink.label}</Link>
-                        </DropdownMenuItem>
-                      ))}
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                </li>
-              ) : (
-                <li key={link.href}>
-                  <Link href={link.href}>
-                    {link.label}
+                    {item.label}
                   </Link>
-                </li>
-              )
-            )}
-          </ul>
-          <div className="hidden md:flex">
-            <button className="join-btn"><Link href="/join-us">Join Us</Link></button>
+                ))}
+              </div>
+            </div>
+
+            {/* Our Services Dropdown */}
+            <div className="relative group">
+              <Link
+                href="/services"
+                className="flex items-center gap-1 hover:text-[#8B0000] transition-colors font-medium text-sm group/services"
+              >
+                Our Services
+                <TiArrowSortedDown
+                  size={16}
+                  className="transition-transform"
+                />
+              </Link>
+
+              {/* Dropdown Menu */}
+              <div className="absolute left-0 mt-6 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-2">
+                {servicesMenuItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="block px-4 py-2  hover:bg-gray-100 hover:text-[#8B0000] transition-colors text-sm"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Blog */}
+            <div className="relative group">
+              <Link
+                href="/blog"
+                className="flex items-center gap-1 hover:text-[#8B0000] transition-colors font-medium text-sm group/services"
+              >
+                Blog
+                <TiArrowSortedDown
+                  size={16}
+                  className="transition-transform"
+                />
+              </Link>
+
+              {/* Dropdown Menu */}
+              <div className="absolute left-0 mt-6 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-2">
+                {blogMenuItems.map((item) => (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    className="block px-4 py-2  hover:bg-gray-100 hover:text-[#8B0000] transition-colors text-sm"
+                  >
+                    {item.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Contact Us */}
+            <Link
+              href="/contact"
+              className=" hover:text-[#8B0000] transition-colors font-medium text-sm"
+            >
+              Contact Us
+            </Link>
+            <div className="hidden md:flex">
+              <button className="join-btn"><Link href="/join-us">Join Us</Link></button>
+            </div>
           </div>
 
-          <Sheet open={isSheetOpen} onOpenChange={setSheetOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
-                <Menu className="h-5 w-5" />
-                <span className="sr-only">Toggle Menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="left">
-              <Link
-                href="/"
-                className="flex items-center space-x-2 mb-6"
-                onClick={() => setSheetOpen(false)}
-              >
-                <Heart className="h-6 w-6 text-primary" />
-                <span className="font-bold">Hoca-africa</span>
-              </Link>
-              <div className="flex flex-col space-y-4">
-                {navLinks.map((link) => (
-                  <div key={link.label}>
-                    {link.sublinks ? (
-                      <div className="flex flex-col space-y-2">
-                        <span className="font-semibold">{link.label}</span>
-                        {link.sublinks.map((sublink) => (
-                          <Link
-                            key={sublink.label}
-                            href={sublink.href}
-                            className="pl-4 text-muted-foreground"
-                            onClick={() => setSheetOpen(false)}
-                          >
-                            {sublink.label}
-                          </Link>
-                        ))}
-                      </div>
-                    ) : (
-                      <Link
-                        href={link.href}
-                        className="font-semibold"
-                        onClick={() => setSheetOpen(false)}
-                      >
-                        {link.label}
-                      </Link>
-                    )}
-                  </div>
-                ))}
-                <Button asChild onClick={() => setSheetOpen(false)}>
-                  <Link href="/join-us">Join Us</Link>
-                </Button>
-              </div>
-            </SheetContent>
-          </Sheet>
+          {/* Mobile Menu Button */}
+          <button
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden p-2 rounded-lg hover:bg-gray-100"
+          >
+            {mobileMenuOpen ? (
+              <X size={24} className="text-[#030229]" />
+            ) : (
+              <Menu size={24} className="text-[#030229]" />
+            )}
+          </button>
         </div>
-      </nav>
-    </>
+
+        {/* Mobile Menu */}
+        {mobileMenuOpen && (
+          <div className="md:hidden pb-4 space-y-2">
+            <Link
+              href="/"
+              className="block px-4 py-2 text-[#030229] hover:bg-gray-100 hover:text-[#8B0000] transition-colors rounded-lg"
+            >
+              Home
+            </Link>
+
+            {/* About Us Mobile */}
+            <div>
+              <button
+                onClick={() => toggleDropdown('about')}
+                className="w-full text-left px-4 py-2 text-[#030229] hover:bg-gray-100 hover:text-[#8B0000] transition-colors rounded-lg flex items-center justify-between"
+              >
+                About Us
+                <TiArrowSortedDown
+                  size={16}
+                  className={`transition-transform ${openDropdown === 'about' ? 'rotate-180' : ''
+                    }`}
+                />
+              </button>
+              {openDropdown === 'about' && (
+                <div className="bg-gray-50 rounded-lg mt-2">
+                  {aboutUsMenuItems.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="block px-6 py-2 text-[#030229] hover:text-[#8B0000] transition-colors text-sm"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Our Services Mobile */}
+            <div>
+              <button
+                onClick={() => toggleDropdown('services')}
+                className="w-full text-left px-4 py-2 text-[#030229] hover:bg-gray-100 hover:text-[#8B0000] transition-colors rounded-lg flex items-center justify-between"
+              >
+                Our Services
+                <TiArrowSortedDown
+                  size={16}
+                  className={`transition-transform ${openDropdown === 'services' ? 'rotate-180' : ''
+                    }`}
+                />
+              </button>
+              {openDropdown === 'services' && (
+                <div className="bg-gray-50 rounded-lg mt-2">
+                  {servicesMenuItems.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      className="block px-6 py-2 text-[#030229] hover:text-[#8B0000] transition-colors text-sm"
+                    >
+                      {item.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            <Link
+              href="/blog"
+              className="block px-4 py-2 text-[#030229] hover:bg-gray-100 hover:text-[#8B0000] transition-colors rounded-lg"
+            >
+              Blog
+            </Link>
+
+            <Link
+              href="/contact"
+              className="block px-4 py-2 text-[#030229] hover:bg-gray-100 hover:text-[#8B0000] transition-colors rounded-lg"
+            >
+              Contact Us
+            </Link>
+            <div className="block">
+              <button className="join-btn"><Link href="/join-us">Join Us</Link></button>
+            </div>
+          </div>
+        )}
+      </div>
+    </nav>
   );
 }
-export default HeaderPage;
