@@ -75,13 +75,13 @@ nav {
 }
 
 .join-btn {
-    padding: 10px 24px;
+    padding: 4px 24px;
     background: #8B0000;
     color: white;
     border: 2px solid #8B0000;
     border-radius: 8px;
-    font-weight: 500;
-    font-size: 16px;
+    font-weight: 400;
+    font-size: 14px;
     cursor: pointer;
     transition: all 0.3s ease;
 }

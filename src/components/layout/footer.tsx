@@ -7,7 +7,7 @@ import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 
 export function Footer() {
   return (
-    <footer className="border-t bg-[#EFF3ED] text-[#030229]">
+    <footer className="border-t bg-[#EFF3ED] relative text-[#030229] z-10">
       <div className="container py-12">
         <div className="flex flex-col md:flex-row justify-between gap-8">
           <div className="flex flex-col space-y-6 max-w-[29.4rem]">

@@ -4,6 +4,7 @@ import Image from "next/image";
 import EdgelifeLogo from '../../assets/images/logos/edgelife.png';
 import MyriaLogo from '../../assets/images/logos/myriadusa.png';
 import MinistrLogo from '../../assets/images/logos/ugandaministr.png';
+import MoHLogo from '../../assets/images/logos/moh-ug.png';
 import VintageLogo from '../../assets/images/logos/vintage.png';
 import TrustedLogo from '../../assets/images/logos/trusted.png';
 import AntikyLogo from '../../assets/images/logos/Antikythera_Logo.png';
@@ -18,6 +19,7 @@ const partners = [
   { name: "Antikythera", image: AntikyLogo },
   { name: "Ministry of Education", image: MinistrLogo },
   { name: "Myriad USA", image: MyriaLogo },
+  { name: "MoH-ug", image: MoHLogo },
 ];
 
 const PartnersCarousel = () => {
