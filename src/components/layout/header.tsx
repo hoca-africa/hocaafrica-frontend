@@ -19,12 +19,12 @@ export default function Navbar() {
   const aboutUsMenuItems = [
     { label: 'Who we are', href: '/about#who-we-are' },
     { label: 'Our team', href: '/about/#our-team' },
-    { label: 'our journey', href: 'our-journey' },
+    { label: 'our journey', href: '/about/#our-journey' },
   ];
 
   const servicesMenuItems = [
-    { label: 'Hospitality', href: '/services/hospitality' },
-    { label: 'Trainings', href: '/services/trainings' },
+    { label: 'Policy, Systems & Advisory', href: '/services' },
+    { label: 'Training & Certification', href: '/services/training' },
   ];
   const blogMenuItems = [
     { label: 'Newsroom', href: '/services/hospitality' },
@@ -47,7 +47,7 @@ export default function Navbar() {
             {/* Home */}
             <Link
               href="/"
-              className="hover:text-[#8B0000] transition-colors font-medium text-sm"
+              className="hover:text-[#8B0000] transition-colors font-medium text-base"
             >
               Home
             </Link>
@@ -56,7 +56,7 @@ export default function Navbar() {
             <div className="relative group">
               <Link
                 href="/about"
-                className="flex items-center gap-1  hover:text-[#8B0000] transition-colors font-medium text-sm group/about"
+                className="flex items-center gap-1  hover:text-[#8B0000] transition-colors font-medium text-base group/about"
               >
                 About Us
                 <TiArrowSortedDown
@@ -71,7 +71,7 @@ export default function Navbar() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="block px-4 py-2 hover:bg-[#EFF3ED60] hover:text-[#8B0000] transition-colors text-sm rounded-lg"
+                    className="block px-4 py-2 text-[#030229] font-medium hover:bg-[#EFF3ED60] hover:text-[#8B0000] transition-colors text-base rounded-lg"
                   >
                     {item.label}
                   </Link>
@@ -83,7 +83,7 @@ export default function Navbar() {
             <div className="relative group">
               <Link
                 href="/services"
-                className="flex items-center gap-1 hover:text-[#8B0000] transition-colors font-medium text-sm group/services"
+                className="flex items-center gap-1 hover:text-[#8B0000] transition-colors font-medium text-base group/services"
               >
                 Our Services
                 <TiArrowSortedDown
@@ -93,12 +93,12 @@ export default function Navbar() {
               </Link>
 
               {/* Dropdown Menu */}
-              <div className="absolute left-0 mt-6 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-2">
+              <div className="absolute left-0 mt-6 p-2 w-[17rem] bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-2">
                 {servicesMenuItems.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="block px-4 py-2  hover:bg-gray-100 hover:text-[#8B0000] transition-colors text-sm"
+                    className="block px-4 py-2 text-[#030229] font-medium hover:bg-[#EFF3ED60] hover:text-[#8B0000] transition-colors text-base rounded-lg"
                   >
                     {item.label}
                   </Link>
@@ -110,7 +110,7 @@ export default function Navbar() {
             <div className="relative group">
               <Link
                 href="/blog"
-                className="flex items-center gap-1 hover:text-[#8B0000] transition-colors font-medium text-sm group/services"
+                className="flex items-center gap-1 hover:text-[#8B0000] transition-colors font-medium text-base group/services"
               >
                 Blog
                 <TiArrowSortedDown
@@ -120,12 +120,12 @@ export default function Navbar() {
               </Link>
 
               {/* Dropdown Menu */}
-              <div className="absolute left-0 mt-6 w-48 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-2">
+              <div className="absolute left-0 mt-6 w-48 p-2 bg-[#F7F7F5] rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 py-2">
                 {blogMenuItems.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="block px-4 py-2  hover:bg-gray-100 hover:text-[#8B0000] transition-colors text-sm"
+                    className="block px-4 py-2 text-[#030229] font-medium  hover:bg-[#EFF3ED60] hover:text-[#8B0000] transition-colors text-base rounded-lg"
                   >
                     {item.label}
                   </Link>
@@ -136,7 +136,7 @@ export default function Navbar() {
             {/* Contact Us */}
             <Link
               href="/contact"
-              className=" hover:text-[#8B0000] transition-colors font-medium text-sm"
+              className=" hover:text-[#8B0000] transition-colors font-medium text-base"
             >
               Contact Us
             </Link>
@@ -182,7 +182,7 @@ export default function Navbar() {
                 />
               </button>
               {openDropdown === 'about' && (
-                <div className="bg-gray-50 rounded-lg mt-2">
+                <div className="bg-[#F7F7F5] rounded-lg mt-2">
                   {aboutUsMenuItems.map((item) => (
                     <Link
                       key={item.href}
@@ -210,7 +210,7 @@ export default function Navbar() {
                 />
               </button>
               {openDropdown === 'services' && (
-                <div className="bg-gray-50 rounded-lg mt-2">
+                <div className="bg-[#F7F7F5] rounded-lg mt-2">
                   {servicesMenuItems.map((item) => (
                     <Link
                       key={item.href}

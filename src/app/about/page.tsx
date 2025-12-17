@@ -1,21 +1,15 @@
 "use client";
 import Image from "next/image";
-import {
-  Users,
-  Clock,
-  Building,
-  Rocket,
-} from "lucide-react";
-import Link from "next/link";
-import ForCaregiversImg from "../../assets/images/aboutimgs.jpeg";
+import { Users, Clock, Building, Rocket } from "lucide-react";
 import ForElders from "../../assets/images/forelders.png";
 import { IoIosCheckmarkCircle } from "react-icons/io";
-import CeoImg from '../../assets/images/team/ceo.png';
-import DirectorImg from '../../assets/images/team/director.png';
-import FinanceImg from '../../assets/images/team/finance.png';
-import Board1Img from '../../assets/images/team/board1.png';
-import Board2Img from '../../assets/images/team/board2.png';
-import ConsultaImg from '../../assets/images/team/consultant.png';
+import CeoImg from "../../assets/images/team/ceo.png";
+import DirectorImg from "../../assets/images/team/director.png";
+import FinanceImg from "../../assets/images/team/finance.png";
+import Board1Img from "../../assets/images/team/board1.png";
+import Board2Img from "../../assets/images/team/board2.png";
+import ConsultaImg from "../../assets/images/team/consultant.png";
+import PageHero from "@/components/PageHero";
 
 const teamMembers = [
   {
@@ -111,30 +105,11 @@ const AboutPage = () => {
   return (
     <div className="bg-background text-[#030229]">
       {/* Hero Section */}
-      <section className="relative h-[40vh] bg-cover bg-center text-white">
-        <Image
-          src={ForCaregiversImg}
-          alt="Caregiver and elderly person smiling"
-          className="object-cover fixed inset-0 w-full h-full"
-          data-ai-hint="caregiver elderly"
-        />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 container h-full flex flex-col justify-center text-white">
-          <h1 className="text-3xl md:text-4xl font-semibold font-headline">
-            About Us
-          </h1>
-          <div className="font-medium text-xl mt-3">
-            <Link
-              href="/"
-              className=" hover:text-[#8b0000] transition-all  py-1 rounded"
-            >
-              Home
-            </Link>
-            <span className="mx-4">&gt;&gt;</span>
-            <span>About Us</span>
-          </div>
-        </div>
-      </section>
+      <PageHero
+        title="About us"
+        currentPage="About us"
+      // backgroundImage={ForCaregiversImg}
+      />
       <div className="relative z-10 bg-background" id="whoweare">
         {/* Who We Are*/}
         <section className="py-16 sm:py-24">
@@ -168,7 +143,7 @@ const AboutPage = () => {
                   eldercare systems for all communities.
                 </p>
                 <p className="text-lg font-normal mb-4 opacity-90">
-                  We envision a continent where every older person can age with
+                  We envision a continent where every older persons can age with
                   dignity, supported by skilled caregivers and strong community
                   systems.
                 </p>
@@ -215,22 +190,20 @@ const AboutPage = () => {
                 Our Core Values
               </h3>
               <div className="text-center text-lg opacity-70 flex justify-evenly gap-4 max-w-[30rem] mx-auto">
-                Dignity -
-                Integrity -
-                Innovation -
-                Service Excellence -
-                Value for Money -
-                Equitable partnerships
+                Dignity - Integrity - Innovation - Service Excellence - Value
+                for Money - Equitable partnerships
               </div>
             </div>
           </div>
         </section>
 
         {/* Our Team Section */}
-        <section className="py-16 sm:py-24" id="our-team"  >
+        <section className="py-16 sm:py-24" id="our-team">
           <div className="container">
             <div className="text-center mb-12">
-              <p className="text-[#8b0000] text-lg font-medium mb-6">OUR TEAM</p>
+              <p className="text-[#8b0000] text-lg font-medium mb-6">
+                OUR TEAM
+              </p>
               <h2 className="text-3xl md:text-4xl font-semibold font-headline capitalize">
                 Our Leadership Expertise
               </h2>
@@ -267,10 +240,9 @@ const AboutPage = () => {
         <section className="py-12 bg-[#EFF3ED]" id="our-journey">
           <div className="container">
             <div className="text-center mb-12">
-              {/* <h2 className="ttext-3xl md:text-4xl font-semibold font-headline capitalize">
-                Our Journey
-              </h2> */}
-              <p className="text-[#8b0000] text-lg font-medium mb-6">OUR JOURNEY</p>
+              <p className="text-[#8b0000] text-lg font-medium mb-6">
+                OUR JOURNEY
+              </p>
               <p className="mb-8 mt-3 text-2xl font-headline font-medium capitalize">
                 A brief history of our commitment to transforming elder care in
                 Africa.
@@ -300,8 +272,8 @@ const AboutPage = () => {
                     </div>
                     <div
                       className={`flex items-center justify-center md:justify-normal ${index % 2 === 0
-                        ? "md:order-2 md:justify-start"
-                        : "md:order-1 md:justify-end"
+                          ? "md:order-2 md:justify-start"
+                          : "md:order-1 md:justify-end"
                         }`}
                     >
                       <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 h-4 w-4 rounded-full bg-primary border-4 border-secondary"></div>
