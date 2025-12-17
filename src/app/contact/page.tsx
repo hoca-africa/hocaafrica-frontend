@@ -1,21 +1,19 @@
-'use client';
+"use client";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import ForCaregiversImg from "../../assets/images/aboutimgs.jpeg";
-import Image from "next/image";
-import Link from "next/link";
 import { SlLocationPin } from "react-icons/sl";
 import { BsEnvelopeAt } from "react-icons/bs";
 import { LiaPhoneVolumeSolid } from "react-icons/lia";
 import { useState } from "react";
 import { TiArrowSortedDown } from "react-icons/ti";
+import PageHero from "@/components/PageHero";
 
 const ContactPage = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
-  const [selectedTopic, setSelectedTopic] = useState('Select');
+  const [selectedTopic, setSelectedTopic] = useState("Select");
 
   const toggleDropdown = (menu: string) => {
     setOpenDropdown(openDropdown === menu ? null : menu);
@@ -45,41 +43,22 @@ const ContactPage = () => {
   ];
 
   const selectDropdown = [
-    { label: 'General Inquiry', value: 'inquiry' },
-    { label: 'Partnership', value: 'partnership' },
-    { label: 'Membership', value: 'membership' },
-    { label: 'Training', value: 'training' },
-    { label: 'Media', href: 'Mmdia' },
+    { label: "General Inquiry", value: "inquiry" },
+    { label: "Partnership", value: "partnership" },
+    { label: "Membership", value: "membership" },
+    { label: "Training", value: "training" },
+    { label: "Media", href: "Mmdia" },
   ];
 
   return (
     <div className="bg-background text-[#030229]">
-      <section className="relative h-[40vh] bg-cover bg-center text-white">
-        <Image
-          src={ForCaregiversImg}
-          alt="Caregiver and elderly person smiling"
-          className="object-cover fixed inset-0 w-full h-full"
-          data-ai-hint="caregiver elderly"
-        />
-        <div className="absolute inset-0 bg-black/60" />
-        <div className="relative z-10 container h-full flex flex-col justify-center text-white">
-          <h1 className="text-3xl md:text-4xl font-semibold font-headline">
-            Contact Us
-          </h1>
-          <div className="font-medium text-xl mt-3">
-            <Link
-              href="/"
-              className=" hover:text-[#8b0000] transition-all  py-1 rounded"
-            >
-              Home
-            </Link>
-            <span className="mx-4">&gt;&gt;</span>
-            <span>Contact Us</span>
-          </div>
-        </div>
-      </section>
-      {/* Hero Section */}
+      <PageHero
+        title="Contact us"
+        currentPage="Contact us"
+        // backgroundImage={ForCaregiversImg}
+      />
 
+      {/* Hero Section */}
       <div className="relative z-10 bg-background" id="contact-us">
         <div className="container py-16 sm:py-24">
           <div className="grid lg:grid-cols-2 gap-4 md:gap-16 items-center">
@@ -133,17 +112,18 @@ const ContactPage = () => {
                   <Label htmlFor="email">Subject</Label>
                   <button
                     type="button"
-                    onClick={() => toggleDropdown('topic')}
+                    onClick={() => toggleDropdown("topic")}
                     className="flex h-10 w-full  items-center justify-between rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-opacity-50 focus:outline-none disabled:cursor-not-allowed disabled:opacity-50"
                   >
                     <span>{selectedTopic}</span>
                     <TiArrowSortedDown
-                      className={`h-4 w-4 opacity-50 transition-transform duration-300 ${openDropdown === 'topic' ? 'rotate-180' : ''
-                        }`}
+                      className={`h-4 w-4 opacity-50 transition-transform duration-300 ${
+                        openDropdown === "topic" ? "rotate-180" : ""
+                      }`}
                     />
                   </button>
 
-                  {openDropdown === 'topic' && (
+                  {openDropdown === "topic" && (
                     <div className="absolute left-0 mt-2 w-full bg-white px-4 rounded-lg shadow-lg py-1 z-50 border">
                       {selectDropdown.map((item) => (
                         <a
