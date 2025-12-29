@@ -28,12 +28,12 @@ const ContactPage = () => {
     {
       icon: <LiaPhoneVolumeSolid size={30} color="#8B0000" />,
       descr: "Call Us",
-      value: "+45677889900",
+      value: "+1 781 244 5912",
     },
     {
       icon: <BsEnvelopeAt size={30} color="#8B0000" />,
       descr: "Get in Touch",
-      value: "info@hoca-africa.org",
+      value: "hocaafrica@gmail.com",
     },
     {
       icon: <SlLocationPin size={30} color="#8B0000" />,
@@ -55,7 +55,7 @@ const ContactPage = () => {
       <PageHero
         title="Contact us"
         currentPage="Contact us"
-        // backgroundImage={ForCaregiversImg}
+      // backgroundImage={ForCaregiversImg}
       />
 
       {/* Hero Section */}
@@ -117,9 +117,8 @@ const ContactPage = () => {
                   >
                     <span>{selectedTopic}</span>
                     <TiArrowSortedDown
-                      className={`h-4 w-4 opacity-50 transition-transform duration-300 ${
-                        openDropdown === "topic" ? "rotate-180" : ""
-                      }`}
+                      className={`h-4 w-4 opacity-50 transition-transform duration-300 ${openDropdown === "topic" ? "rotate-180" : ""
+                        }`}
                     />
                   </button>
 

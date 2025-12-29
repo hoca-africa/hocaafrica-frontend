@@ -58,36 +58,72 @@ export function Footer() {
               Contact Us
             </h3>
             <ul className="space-y-4 text-[16px]">
-              <li>
-                <Link href="/about" className=" hover:text-primary font-normal">
-                  +256759861818 | hocaafrica@gmail.com
-                </Link>
+              <li className="font-normal">
+                {/* WhatsApp link */}
+                <a
+                  href="https://wa.me/17812445912"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary"
+                >
+                  +1 781 244 5912
+                </a>
+
+                <span className="mx-2">|</span>
+
+                {/* Email link */}
+                <a
+                  href="mailto:hocaafrica@gmail.com"
+                  className="hover:text-primary"
+                >
+                  hocaafrica@gmail.com
+                </a>
               </li>
+
               <div className="flex space-x-4">
-                <Link
-                  href="#"
-                  className="hover:text-primary font-normal opacity-90"
+                {/* WhatsApp */}
+                <a
+                  href="https://wa.me/17812445912"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary opacity-90"
+                  aria-label="WhatsApp"
                 >
                   <BsWhatsapp color="#030229" size={22} />
-                </Link>
-                <Link
-                  href="#"
-                  className="hover:text-primary font-normal opacity-90"
+                </a>
+
+                {/* X (Twitter) */}
+                <a
+                  href="https://x.com/HOCA_Africa" // replace with real handle
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary opacity-90"
+                  aria-label="X (Twitter)"
                 >
                   <BsTwitterX color="#030229" size={20} />
-                </Link>
-                <Link
-                  href="#"
-                  className="hover:text-primary font-normal opacity-90"
+                </a>
+
+                {/* LinkedIn */}
+                <a
+                  href="https://www.linkedin.com/company/hoca-africa" // replace if needed
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary opacity-90"
+                  aria-label="LinkedIn"
                 >
                   <BiLogoLinkedin color="#030229" size={24} />
-                </Link>
-                <Link
-                  href="#"
-                  className="hover:text-primary font-normal opacity-90"
+                </a>
+
+                {/* Instagram */}
+                <a
+                  href="https://www.instagram.com/mwiinenkore" // replace with real handle
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary opacity-90"
+                  aria-label="Instagram"
                 >
                   <BsInstagram color="#030229" size={21} />
-                </Link>
+                </a>
               </div>
             </ul>
           </div>

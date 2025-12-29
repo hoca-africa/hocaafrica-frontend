@@ -48,7 +48,7 @@ const TrainingPage = () => {
             TRAINING & CERTIFICATION
           </p>
         </div>
-        <div className="grid grid-cols-2 gap-6 my-3">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 my-3">
           <div className="flex items-center">
             <h1 className="text:2xl md:text-4xl font-headline !leading-[3.5rem] font-medium">
               We deliver competency-based training programs that equip
@@ -68,7 +68,7 @@ const TrainingPage = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-[#8B0000]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-6 my-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 my-6">
           <div className="relative w-full h-[350px] md:h-[450px] lg:h-[750px] rounded-3xl overflow-hidden border-4 border-white shadow-2xl hover:shadow-[0_20px_60px_rgba(139,0,0,0.3)] transition-all duration-500 group bg-gradient-to-br from-gray-50 to-gray-100">
             <Image
               src={TrainigImga}
