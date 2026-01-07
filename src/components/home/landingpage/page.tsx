@@ -127,7 +127,7 @@ export default function LandingPage() {
                             home-based and geriatric care — driven by African values and
                             global standards.
                         </p>
-                        <Link href="#explore" className="cta-button">
+                        <Link href="/join-us" className="cta-button">
                             <span>Join Us Today</span>
                             <span className="arrow">→</span>
                         </Link>

@@ -73,10 +73,10 @@ export function Footer() {
 
                 {/* Email link */}
                 <a
-                  href="mailto:hocaafrica@gmail.com"
+                  href="mailto:info@hoca-africa.org"
                   className="hover:text-primary"
                 >
-                  hocaafrica@gmail.com
+                  info@hoca-africa.org
                 </a>
               </li>
 
