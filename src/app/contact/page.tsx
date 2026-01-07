@@ -33,7 +33,7 @@ const ContactPage = () => {
     {
       icon: <BsEnvelopeAt size={30} color="#8B0000" />,
       descr: "Get in Touch",
-      value: "hocaafrica@gmail.com",
+      value: "info@hoca-africa.org",
     },
     {
       icon: <SlLocationPin size={30} color="#8B0000" />,
