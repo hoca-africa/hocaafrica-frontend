@@ -4,6 +4,7 @@ import TrainigImga from "../../../assets/images/tranings/trainingimg2.jpeg";
 import { PiCertificateThin } from "react-icons/pi";
 import "../../../components/home/landingpage/landingpage.css";
 import PageHero from "@/components/PageHero";
+import Link from "next/link";
 
 const TrainingPage = () => {
   const programsAr = [
@@ -114,10 +115,10 @@ const TrainingPage = () => {
             ))}
           </div>
           <div className="float-right">
-            <button className="cta-button">
+            <Link href="/join-us" className="cta-button">
               <span>Apply Now</span>
               <span className="arrow">→</span>
-            </button>
+            </Link>
           </div>
         </div>
       </div></div>

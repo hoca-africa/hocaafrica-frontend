@@ -28,7 +28,7 @@ export default function Navbar() {
   ];
   const blogMenuItems = [
     { label: 'Newsroom', href: '/services/hospitality' },
-    { label: 'Events', href: '/services/trainings' },
+    { label: 'Articles', href: '/services/trainings' },
   ];
 
   return (

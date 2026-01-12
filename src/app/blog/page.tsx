@@ -1,15 +1,185 @@
-export default function BlogPage() {
+import Image from 'next/image';
+import Link from 'next/link';
+import {
+  Tag,
+  MessageCircle,
+  Search,
+  ChevronRight,
+  ArrowRight,
+} from 'lucide-react';
+import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
+import { Input } from '@/components/ui/input';
+import { Button } from '@/components/ui/button';
+import PageHero from '@/components/PageHero';
+import Blogimg1 from '../../assets/images/blogimg/blogimg1.jpeg';
+import Blogimg2 from '../../assets/images/blogimg/blogimg2.jpeg';
+import Blogimg3 from '../../assets/images/blogimg/blogimg3.jpeg';
+import ProfileP from '../../assets/images/blogimg/ppicture.jpeg';
+
+const blogPosts = [
+  {
+    image: Blogimg1,
+    date: { day: '12', month: 'Dec' },
+    category: 'Party',
+    comments: 0,
+    title: "QT Global Software's End-of-Year Celebration: A night to Remember",
+    excerpt:
+      'QT team came together for a truly unforgettable evening – a time to connect, relax, and celebrate without the pressure of deadlines. Dressed to impress, the team radiated holiday spirit as they enjoy vibrant conversation, delicious food, and music that kept the energy high throughout the night.',
+    author: {
+      name: 'By Hoca-A',
+      role: 'Web Admin',
+      avatar: '.../../assets/images/blogimg/ppicture.jpeg',
+    },
+  },
+  {
+    image: Blogimg3,
+    date: { day: '18', month: 'Nov' },
+    category: 'Community',
+    comments: 5,
+    title: 'HOCA-A Commits to Expanding Eldercare Training in 2025',
+    excerpt:
+      'In a landmark announcement, Home Care Alliance Africa (HOCA-A) has unveiled its strategic plan to significantly expand its caregiver training programs across the continent, aiming to certify over 5,000 new professionals by the end of 2025.',
+    author: {
+      name: 'By Hoca-A',
+      role: 'Web Admin',
+      avatar: 'https://picsum.photos/seed/author2/40/40',
+    },
+  },
+  {
+    image: Blogimg2,
+    date: { day: '25', month: 'Oct' },
+    category: 'Policy',
+    comments: 12,
+    title: 'New Standards for Home-Based Care Announced',
+    excerpt:
+      'The Ministry of Health, in partnership with HOCA-A, has officially released a new set of comprehensive standards designed to professionalize and regulate the home-based care sector, ensuring safety and quality for all.',
+    author: {
+      name: 'By Hoca-A',
+      role: 'Web Admin',
+      avatar: 'https://picsum.photos/seed/author3/40/40',
+    },
+  },
+];
+
+const categories = [
+  'All',
+  'Caregiving',
+  'Community',
+  'Eldercare',
+  'Policy',
+  'Training',
+  'Events',
+];
+
+const BlogPage = () => {
   return (
-    <div className="container py-16 sm:py-24">
-      <div className="text-center">
-        <h1 className="text-4xl md:text-5xl font-bold font-headline">Our Blog</h1>
-        <p className="mt-4 text-lg text-muted-foreground">
-          News, stories, and insights from the Hoca-africa community.
-        </p>
-      </div>
-      <div className="mt-16 text-center">
-        <p>Our blog is coming soon. Stay tuned for updates!</p>
+    <div className="bg-background text-foreground">
+      <PageHero
+        title="HOCA-A Blog"
+        currentPage="Our Blog"
+      // backgroundImage={ForCaregiversImg}
+      />
+      <div className="relative z-10 bg-background">
+        <div className="container py-16 sm:py-24">
+          <div className="grid lg:grid-cols-3 gap-12">
+            {/* Blog Posts Grid */}
+            <div className="lg:col-span-2 grid gap-8">
+              {blogPosts.map((post, index) => (
+                <div
+                  key={index}
+                  className="bg-card rounded-lg border border-border overflow-hidden p-6"
+                >
+                  <div className="relative">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      width={600}
+                      height={400}
+                      className="w-full h-[30rem] object-cover"
+                    />
+                    <div className="absolute top-0 left-0 bg-[#c39c1d] text-primary-foreground p-4 px-8 rounded-br-lg">
+                      <p className="font-bold text-2xl">{post.date.day}</p>
+                      <p className="text-sm">{post.date.month}</p>
+                    </div>
+                  </div>
+                  <div className="p-6">
+                    <div className="flex items-center gap-4 text-sm text-muted-foreground mb-4">
+                      <div className="flex items-center gap-2">
+                        <Tag className="h-4 w-4" />
+                        <span>{post.category}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MessageCircle className="h-4 w-4" />
+                        <span>{post.comments} Comments</span>
+                      </div>
+                    </div>
+                    <h2 className="text-2xl font-bold font-headline mb-4 text-foreground">
+                      <Link href="#" className="hover:text-primary">
+                        {post.title}
+                      </Link>
+                    </h2>
+                    <p className="text-muted-foreground mb-6">{post.excerpt}</p>
+                    <div className="flex justify-between items-center">
+                      <div className="flex items-center gap-3">
+                        <Avatar>
+                          <AvatarImage src={post.author.avatar}  />
+                          <AvatarFallback>
+                            {post.author.name
+                              .split(' ')
+                              .map((n) => n[0])
+                              .join('')}
+                          </AvatarFallback>
+                        </Avatar>
+                        <div>
+                          <p className="font-semibold text-sm">
+                            {post.author.name}
+                          </p>
+                          <p className="text-xs text-muted-foreground">
+                            {post.author.role}
+                          </p>
+                        </div>
+                      </div>
+                      <Button asChild>
+                        <Link href="#">
+                          Read More <ArrowRight className="ml-2 h-4 w-4" />
+                        </Link>
+                      </Button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Sidebar */}
+            <aside className="space-y-8">
+              <div className="bg-card p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold mb-4 font-headline text-foreground">Search</h3>
+                <div className="relative">
+                  <Input placeholder="Search blog..." className="pr-10" />
+                  <Search className="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
+                </div>
+              </div>
+              <div className="bg-card p-6 rounded-lg shadow-md">
+                <h3 className="text-xl font-bold mb-4 font-headline text-foreground">Categories</h3>
+                <ul className="space-y-2">
+                  {categories.map((category) => (
+                    <li key={category}>
+                      <Link
+                        href="#"
+                        className="flex justify-between items-center text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        <span>{category}</span>
+                        <ChevronRight className="h-4 w-4" />
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </aside>
+          </div>
+        </div>
       </div>
     </div>
   );
-}
+};
+export default BlogPage;
