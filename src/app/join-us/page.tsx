@@ -24,7 +24,6 @@ const JoinUsPage = () => {
     { label: "Trainee", value: "training" },
     { label: "Partner", value: "partnership" },
     { label: "Member", value: "member" },
-    { label: "Media", href: "Mmdia" },
   ];
 
   return (
