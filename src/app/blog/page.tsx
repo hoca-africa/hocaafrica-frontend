@@ -119,7 +119,7 @@ const BlogPage = () => {
                     </h2>
                     <p className="text-muted-foreground mb-6">{post.excerpt}</p>
                     <div className="flex justify-between items-center">
-                      <div className="flex items-center gap-3">
+                      <div className="flex flex-wrap items-center gap-3">
                         <Avatar>
                           <AvatarImage src={post.author.avatar} />
                           <AvatarFallback>
