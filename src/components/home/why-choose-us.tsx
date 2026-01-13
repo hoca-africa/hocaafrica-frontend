@@ -26,7 +26,7 @@ export function WhyChooseUs() {
             Raising the Standard of Home Care for Every Family.
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-10 items-center">
           <div className="flex flex-col justify-center gap-6">
             {features.map((feature, index) => (
               <div key={index} className="flex gap-3">

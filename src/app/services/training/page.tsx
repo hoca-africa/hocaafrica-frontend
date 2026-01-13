@@ -51,7 +51,7 @@ const TrainingPage = () => {
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 my-3">
           <div className="flex items-center">
-            <h1 className="text:2xl md:text-4xl font-headline !leading-[3.5rem] font-medium">
+            <h1 className="text-2xl md:text-4xl font-headline !leading-[2.5rem] md:!leading-[3.5rem] font-medium px-4">
               We deliver competency-based training programs that equip
               professional caregivers to provide high-quality, dignified, and
               culturally responsive home care.
@@ -82,7 +82,7 @@ const TrainingPage = () => {
             <div className="absolute inset-0 bg-gradient-to-t from-[#8B0000]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
           </div>
           <div className="flex items-center">
-            <h1 className="text:2xl md:text-4xl font-headline !leading-[3.5rem] font-medium">
+            <h1 className="text-2xl md:text-4xl font-headline !leading-[2.5rem] md:!leading-[3.5rem] font-medium px-4">
               Our programs blend practical skills, theoretical knowledge, and
               community engagement, producing a workforce ready to meet the
               continent’s growing elder-care needs.
@@ -106,7 +106,7 @@ const TrainingPage = () => {
                     <h3 className="text-2xl text-[#030229] font-semibold">
                       {data.title}
                     </h3>
-                    <p className="mt-2 text-[#030229] text-lg opacity-80">
+                    <p className="mt-2 text-[#030229] text-xl lg:text-lg opacity-80">
                       {data.descr}
                     </p>
                   </div>
@@ -114,7 +114,7 @@ const TrainingPage = () => {
               </div>
             ))}
           </div>
-          <div className="float-right">
+          <div className=" flex items-center justify-center">
             <Link href="/join-us" className="cta-button">
               <span>Apply Now</span>
               <span className="arrow">→</span>
