@@ -14,7 +14,6 @@ import PageHero from '@/components/PageHero';
 import Blogimg1 from '../../assets/images/blogimg/blogimg1.jpeg';
 import Blogimg2 from '../../assets/images/blogimg/blogimg2.jpeg';
 import Blogimg3 from '../../assets/images/blogimg/blogimg3.jpeg';
-import ProfileP from '../../assets/images/blogimg/ppicture.jpeg';
 
 const blogPosts = [
   {
@@ -22,41 +21,41 @@ const blogPosts = [
     date: { day: '12', month: 'Dec' },
     category: 'Party',
     comments: 0,
-    title: "QT Global Software's End-of-Year Celebration: A night to Remember",
+    title: "HOCA-A Commits to Expanding Eldercare Training in 2025",
     excerpt:
-      'QT team came together for a truly unforgettable evening – a time to connect, relax, and celebrate without the pressure of deadlines. Dressed to impress, the team radiated holiday spirit as they enjoy vibrant conversation, delicious food, and music that kept the energy high throughout the night.',
+      'In a landmark announcement, Home Care Alliance Africa (HOCA-A) has unveiled its strategic plan to significantly expand its caregiver training programs across the continent, aiming to certify over 5,000 new professionals by the end of 2025.',
     author: {
       name: 'By Hoca-A',
       role: 'Web Admin',
-      avatar: '.../../assets/images/blogimg/ppicture.jpeg',
+      avatar: '/images/ppictur.jpg',
     },
   },
   {
     image: Blogimg3,
     date: { day: '18', month: 'Nov' },
     category: 'Community',
-    comments: 5,
+    comments: 0,
     title: 'HOCA-A Commits to Expanding Eldercare Training in 2025',
     excerpt:
       'In a landmark announcement, Home Care Alliance Africa (HOCA-A) has unveiled its strategic plan to significantly expand its caregiver training programs across the continent, aiming to certify over 5,000 new professionals by the end of 2025.',
     author: {
       name: 'By Hoca-A',
       role: 'Web Admin',
-      avatar: 'https://picsum.photos/seed/author2/40/40',
+      avatar: '/images/ppictur.jpg',
     },
   },
   {
     image: Blogimg2,
     date: { day: '25', month: 'Oct' },
     category: 'Policy',
-    comments: 12,
+    comments: 0,
     title: 'New Standards for Home-Based Care Announced',
     excerpt:
       'The Ministry of Health, in partnership with HOCA-A, has officially released a new set of comprehensive standards designed to professionalize and regulate the home-based care sector, ensuring safety and quality for all.',
     author: {
       name: 'By Hoca-A',
       role: 'Web Admin',
-      avatar: 'https://picsum.photos/seed/author3/40/40',
+      avatar: '/images/ppictur.jpg',
     },
   },
 ];
@@ -122,7 +121,7 @@ const BlogPage = () => {
                     <div className="flex justify-between items-center">
                       <div className="flex items-center gap-3">
                         <Avatar>
-                          <AvatarImage src={post.author.avatar}  />
+                          <AvatarImage src={post.author.avatar} />
                           <AvatarFallback>
                             {post.author.name
                               .split(' ')
@@ -152,21 +151,21 @@ const BlogPage = () => {
 
             {/* Sidebar */}
             <aside className="space-y-8">
-              <div className="bg-card p-6 rounded-lg shadow-md">
+              <div className="bg-gray-100 p-6 rounded-sm shadow-md">
                 <h3 className="text-xl font-bold mb-4 font-headline text-foreground">Search</h3>
                 <div className="relative">
                   <Input placeholder="Search blog..." className="pr-10" />
                   <Search className="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
                 </div>
               </div>
-              <div className="bg-card p-6 rounded-lg shadow-md">
+              <div className="bg-gray-100 p-6 rounded-sm shadow-md">
                 <h3 className="text-xl font-bold mb-4 font-headline text-foreground">Categories</h3>
                 <ul className="space-y-2">
                   {categories.map((category) => (
                     <li key={category}>
                       <Link
                         href="#"
-                        className="flex justify-between items-center text-muted-foreground hover:text-primary transition-colors"
+                        className="flex justify-between items-center text-muted-foreground hover:text-primary transition-colors py-4 my-4  bg-white px-4 rounded-md"
                       >
                         <span>{category}</span>
                         <ChevronRight className="h-4 w-4" />

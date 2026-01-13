@@ -27,8 +27,8 @@ export default function Navbar() {
     { label: 'Training & Certification', href: '/services/training' },
   ];
   const blogMenuItems = [
-    { label: 'Newsroom', href: '/services/hospitality' },
-    { label: 'Articles', href: '/services/trainings' },
+    { label: 'Newsroom', href: '/blog#' },
+    { label: 'Articles', href: '/blog' },
   ];
 
   return (

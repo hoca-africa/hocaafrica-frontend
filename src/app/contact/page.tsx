@@ -47,7 +47,7 @@ const ContactPage = () => {
     { label: "Partnership", value: "partnership" },
     { label: "Membership", value: "membership" },
     { label: "Training", value: "training" },
-    { label: "Media", href: "Mmdia" },
+    { label: "Media", value: "media" },
   ];
 
   return (
@@ -124,7 +124,7 @@ const ContactPage = () => {
 
                   {openDropdown === "topic" && (
                     <div className="absolute left-0 mt-2 w-full bg-white px-4 rounded-lg shadow-lg py-1 z-50 border">
-                      {selectDropdown.map((item) => (
+                      {selectDropdown.map((item: any) => (
                         <a
                           key={item.value}
                           onClick={() => handleSelect(item)}

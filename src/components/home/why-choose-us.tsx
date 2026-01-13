@@ -3,12 +3,12 @@ import StatsImg from "../../assets/images/whyus.png";
 import { IoCheckmarkOutline } from "react-icons/io5";
 
 const features = [
-  { title: "Africa’s First Home Care Accreditation & Standards Body" },
   { title: "A Mission Rooted in Dignity, Culture & Community" },
   { title: "Transforming Elder Care Through Workforce Development" },
   { title: "Technical Expertise from Global Leaders" },
   { title: "Workforce Development That Elevates Home-Care Quality" },
   { title: "Evidence-Backed Standards, Tools & Accountability" },
+  { title: "Africa’s First Home Care Accreditation & Standards Body" },
   { title: "A Trusted Partner for Governments, NGOs & Investors" },
   { title: "Impact That Reaches Families, Communities & the Nation" }
 ];
