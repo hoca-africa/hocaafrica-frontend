@@ -1,0 +1,12 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        { "type": "host", "value": "www.hoca-africa.org" }
+      ],
+      "destination": "https://hoca-africa.org/$1",
+      "permanent": true
+    }
+  ]
+}

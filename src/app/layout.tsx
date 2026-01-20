@@ -6,8 +6,26 @@ import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
-  title: 'Hoca-africa',
-  description: 'Welcome to Hoca-africa, your trusted home care alliance.',
+  title: {
+    default: 'Hoca-africa',
+    template: "%s | HOCA Africa",
+  },
+  description:
+    "Home Care Alliance Africa (HOCA-A) is a Pan-African, not-for-profit alliance dedicated to developing systems, standards, and regulatory frameworks for home-based and geriatric care across the continent.",
+
+  metadataBase: new URL("https://hoca-africa.org"),
+  alternates: {
+    canonical: "https://hoca-africa.org",
+  },
+  openGraph: {
+    title: "HOCA Africa",
+    description:
+      "Building Africa’s Future of Elder Care",
+    url: "https://hoca-africa.org",
+    siteName: "HOCA Africa",
+    locale: "en_US",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
