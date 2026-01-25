@@ -16,7 +16,7 @@ const ServicesPage = () => {
     {
       title: "Policy & Standards Development",
       description:
-        "HOCA-A formulates national and institutional frameworks for home care, elderly care, and rehabilitation services.We collaborate with governments and institutions to design home- care policies, standards, and accreditation frameworks tailored to African realities.",
+        "HOCA-A formulates national and institutional frameworks for home care, elderly care, and rehabilitation services.We collaborate with governments and institutions to design home-care policies, standards, and accreditation frameworks tailored to African realities.",
       image: Policyimg,
     },
     {
@@ -40,7 +40,7 @@ const ServicesPage = () => {
     {
       title: "Research & Digital Health Integration",
       description:
-        "We develop and implement competency-based training curricula for caregivers, trainers, and training institutions.Our programs are aligned with national qualification frameworks (DIT- UVQF 5772) — strengthening both institutions and individual caregivers to deliver safe, skilled, and dignified care.",
+        "HOCA-A promotes data systems, telehealth, and applied research to strengthen evidence-based decision-making in community eldercare.Through digital tools and innovation, we advance accessibility, monitoring, and coordination of care across urban and rural settings.",
       image: Researchimg,
     },
     {

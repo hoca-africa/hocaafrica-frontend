@@ -142,7 +142,7 @@ const ProblemPage: React.FC = () => {
         },
     ];
     return (
-        <section className="py-16 sm:py-24 bg-[#EFF3ED] relative min-h-screen">
+        <section className="py-16 sm:py-24 bg-[#EFF3ED] relative lg:min-h-screen ">
             <style>{`
                 .slider-container .slick-prev,
                 .slider-container .slick-next {

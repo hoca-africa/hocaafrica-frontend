@@ -101,6 +101,33 @@ const historyEvents = [
   },
 ];
 
+const coreValues = [
+  {
+    title: "Dignity",
+    descr: "We affirm the inherent worth of every individual — especially older persons, caregivers, and community members — ensuring that all actions, services, and communications promote respect, compassion, and human value.",
+  },
+  {
+    title: "Integrity",
+    descr: "We operate with honesty, transparency, and accountability in all decisions and partnerships, maintaining public trust and upholding the highest ethical standards in leadership and financial management.",
+  },
+  {
+    title: "Innovation",
+    descr: "We encourage creativity and the use of new ideas, technologies, and models of care to improve the quality, accessibility, and sustainability of elder-care systems in Africa.",
+  },
+  {
+    title: "Service Excellence",
+    descr: "We strive for quality, professionalism, and continuous improvement in all programs and operations, ensuring that every service reflects commitment, empathy, and competence.",
+  },
+  {
+    title: "Value for Money",
+    descr: "We pursue efficiency and prudent use of resources, guaranteeing that every shilling and dollar invested in HOCA-A yields measurable social and health impact for African communities.",
+  },
+  {
+    title: "Equitable Partnerships",
+    descr: "We believe in collaboration built on mutual respect, fairness, and shared benefit — engaging governments, institutions, communities, and the private sector as co-creators of Africa’s care future.",
+  },
+];
+
 const AboutPage = () => {
   return (
     <div className="bg-background text-[#030229]">
@@ -135,18 +162,20 @@ const AboutPage = () => {
                 <h2 className="text-3xl md:text-4xl font-semibold font-headline my-4 text-[#030229] !leading-[3rem]">
                   Strengthening the Future of Eldercare in Africa
                 </h2>
+                <p className="text-lg font-normal opacity-90">
+                  Home Care Alliance Africa (HOCA-A) is a Pan-African, not-for-profit alliance dedicated to
+                  developing <b>systems, standards, and regulatory frameworks</b> for home-based and geriatric care
+                  across the continent.</p>
                 <p className="text-lg font-normal mb-4 opacity-90">
-                  Home Care Alliance Africa (HOCA-A) exists to transform
-                  geriatric and home-based healthcare across the continent by
-                  uniting African expertise, global standards, and decades of
-                  professional leadership to build dignified, high-quality
-                  eldercare systems for all communities.
+                  HOCA-A serves as Africa’s technical and regulatory reference body for home-care and
+                  elderly-care systems, working hand-in-hand with <b>Ministries of Health, training institutions,
+                    faith-based organizations,</b>  and <b>community networks</b>.
                 </p>
-                <p className="text-lg font-normal mb-4 opacity-90">
+                <i className="text-lg font-normal mb-4 opacity-90">
                   We envision a continent where every older persons can age with
                   dignity, supported by skilled caregivers and strong community
                   systems.
-                </p>
+                </i>
               </div>
             </div>
           </div>
@@ -163,10 +192,8 @@ const AboutPage = () => {
                     Mission
                   </h3>
                   <p className="text-lg opacity-70">
-                    To lead the transformation of eldercare in Africa by setting
-                    high-quality standards, delivering professional home-based
-                    services, and ensuring dignity, safety, and well-being for
-                    every older adult in our communities.
+                    Transform eldercare in Africa through quality standards, professional home-based
+                    services, and systems ensuring dignity, safety, and health within communities.
                   </p>
                 </div>
               </div>
@@ -177,9 +204,8 @@ const AboutPage = () => {
                     Vision
                   </h3>
                   <p className="text-lg opacity-70">
-                    An Africa where every elderly person thrives with dignity,
-                    health, and joy, supported by professional, community-driven
-                    eldercare systems.
+                    Shaping tomorrow’s Africa with professional eldercare systems delivered by accredited,
+                    community-driven models.
                   </p>
                 </div>
               </div>
@@ -189,9 +215,21 @@ const AboutPage = () => {
                 <IoIosCheckmarkCircle size={28} color="#8b0000" />
                 Our Core Values
               </h3>
-              <div className="text-center text-lg opacity-70 flex justify-evenly gap-4 max-w-[30rem] mx-auto">
-                Dignity - Integrity - Innovation - Service Excellence - Value
-                for Money - Equitable partnerships
+              <div className="flex flex-wrap gap-2 justify-evenly mb-3">
+                {coreValues.map((data, index) => (
+                  <div key={index} className=" max-w-[25rem] p-6">
+                    <div className="flex gap-3">
+                      <div>
+                        <h3 className="text-[1.3rem] text-[#030229] font-semibold">
+                          {data.title}
+                        </h3>
+                        <p className="mt-2 text-[#030229] text-[1rem] opacity-70 border-l-[1px] rounded-lg border-[#03022950] pl-4">
+                          {data.descr}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -272,8 +310,8 @@ const AboutPage = () => {
                     </div>
                     <div
                       className={`flex items-center justify-center md:justify-normal ${index % 2 === 0
-                          ? "md:order-2 md:justify-start"
-                          : "md:order-1 md:justify-end"
+                        ? "md:order-2 md:justify-start"
+                        : "md:order-1 md:justify-end"
                         }`}
                     >
                       <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 h-4 w-4 rounded-full bg-primary border-4 border-secondary"></div>

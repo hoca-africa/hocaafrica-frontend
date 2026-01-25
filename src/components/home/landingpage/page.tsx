@@ -57,7 +57,7 @@ const CirclePhoto1 = () => (
             <rect width="280" height="280" fill="url(#grad1)" />
         </svg>
         <Image
-            src={ForEldersImg}
+            src={ForCaregiversImg}
             alt="Founder Image"
             fill
             className="object-contain"
@@ -80,7 +80,7 @@ const CirclePhoto2 = () => (
             <rect width="280" height="280" fill="url(#grad1)" />
         </svg>
         <Image
-            src={ForCaregiversImg}
+            src={ForEldersImg}
             alt="Founder Image"
             fill
             className="object-contain"

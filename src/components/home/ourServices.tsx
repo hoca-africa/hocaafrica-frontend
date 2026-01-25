@@ -3,7 +3,6 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/linkbuton";
 import { ArrowRight } from "lucide-react";
 import PolicyIcon from "../../assets/icons/services/policy-standards.svg";
 import TrainingIcon from "../../assets/icons/services/training-certification.svg";
@@ -50,9 +49,9 @@ const OurServicesPreview = () => {
               OUR SERVICES
             </p>
           </div>
-          <p className="mt-6 text-3xl max-w-3xl mx-auto font-headline capitalize">
-            Building a sustainable and high-quality home care ecosystem across
-            the continent.
+          <p className="mt-6 text-3xl max-w-4xl mx-auto font-headline capitalize">
+            From policy to practice HOCA-A unites systems, skills, and standards to
+            build Africa’s future of dignified care.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -83,11 +82,9 @@ const OurServicesPreview = () => {
           ))}
         </div>
         <div className="text-center mt-12">
-          <Button asChild size="lg" className="cta-button">
-            <Link href="/services">
-              View All Services <ArrowRight className="ml-2 h-4 w-4" />
-            </Link>
-          </Button>
+          <Link href="/services" className="cta-button">
+            View All Services <ArrowRight className="ml-2 h-4 w-4" />
+          </Link>
         </div>
       </div>
     </section>

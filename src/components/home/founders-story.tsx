@@ -1,10 +1,25 @@
+'use client';
+
 import Image from "next/image";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import MotherImg from "../../assets/images/mother.png";
-import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { Modal, Button } from 'antd';
+import { useState } from "react";
 
 const FoundersStory = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const showModal = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleOk = () => {
+    setIsModalOpen(false);
+  };
+
+  const handleCancel = () => {
+    setIsModalOpen(false);
+  };
   const founderImage = PlaceHolderImages.find(
     (img) => img.id === "founder-image"
   );
@@ -25,7 +40,7 @@ const FoundersStory = () => {
     >
       <div>
         <div className="mx-auto w-fit ">
-          <p className="text-base font-normal font-headline bg-[#8B0000] bg-opacity-5 px-10 py-2 rounded-[2rem] text-[#030229] ">
+          <p onClick={showModal} className="text-base font-normal font-headline bg-[#8B0000] bg-opacity-5 px-10 py-2 rounded-[2rem] text-[#030229] cursor-pointer ">
             OUR FOUNDER'S STORY
           </p>
         </div>
@@ -86,6 +101,64 @@ const FoundersStory = () => {
           </div>
         </div>
       </div>
+      <Modal
+        closable={{ 'aria-label': 'Custom Close Button' }}
+        open={isModalOpen}
+        onOk={handleOk}
+        onCancel={handleCancel}
+        width={1000}
+        footer={
+          <Button type="primary" onClick={handleOk}>
+            Close
+          </Button>
+        }
+      >
+        <div className="p-4 text-[#030229]">
+          <h1 className="font-semibold text-2xl my-4">A Mother’s story - The Birth of a Movement</h1>
+          <p className="text-xl">
+            I was born in Bugangari, Rukungiri District, Uganda, where I learned the value of community
+            and compassion by watching my parents care for my grandparents. That early lesson in dignity
+            and family responsibility became the foundation of my life’s work.</p>
+          <p className="text-xl mt-4">
+            After migrating to the United States, I trained and served as a Registered Nurse in home health,
+            hospice, and palliative care for more than 25 years. In Boston, I saw the power of structured
+            home-care systems where trained caregivers, ethical standards, and compassion preserve
+            independence and dignity for the elderly.
+            Yet, each time I looked back home, I saw the opposite reality: families filled with love but
+            lacking systems to support ageing with dignity.</p>
+          <p className="text-xl mt-4">
+            When my mother turned eighty, she began battling chronic illnesses common among ageing
+            Africans hypertension, diabetes, arthritis, and frailty.
+            Like many elders, she was trapped in a
+            cycle of preventable hospitalizations. Together with my siblings we decided to care for her at
+            home with consistent, compassionate, and structured support. For four years, she lived
+            comfortably and never returned to the hospital until her peaceful passing.
+            That experience opened my eyes: <b>organized home care changes lives</b>. It wasn’t just her story it was Africa’s
+            story.</p>
+          <p className="text-xl mt-4">  In 2021, I founded <b>Vantage Care Limited Uganda</b>, the country’s first structured, professionally
+            managed home-care organization. Through Vantage Care, hundreds of young Ugandans have
+            been trained and employed as certified caregivers, restoring dignity to elders while creating
+            sustainable livelihoods for youth.</p>
+          <p className="text-xl mt-4">
+            That success led to a greater vision to expand the model beyond Uganda. This became <b>Home
+              Care Alliance Africa (HOCA-A)</b> : a Pan-African movement to professionalize compassion,
+            systematize care, and dignify ageing across Africa.
+            HOCA-A blends Boston’s clinical excellence with Africa’s communal caregiving spirit, creating
+            a bridge between personal experience and continental purpose.</p>
+          <div className="text-xl mt-4">
+            <h2 className="font-semibold text-2xl mb-3">HOCA-A exists to ensure that :</h2>
+            <ul className="list-disc pl-5">
+              <li>No African elder suffers for lack of care,</li>
+              <li>No caregiver serves without recognition,</li>
+              <li>No family carries this burden alone.</li>
+            </ul></div>
+          <i className="text-lg mt-6">
+            We envision Africa where older persons age gracefully at home, supported by trained
+            caregivers, informed families, and compassionate systems of care.
+          </i>
+          <p className="text-xl mt-2">Barnabas Nkore, RN</p>
+        </div>
+      </Modal>
     </section>
   );
 };
