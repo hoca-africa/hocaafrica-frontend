@@ -1,50 +1,82 @@
 'use client';
 
 import Image from "next/image";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
 import MotherImg from "../../assets/images/mother.png";
-import { Modal, Button } from 'antd';
-import { useState } from "react";
 
 const FoundersStory = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const showModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleOk = () => {
-    setIsModalOpen(false);
-  };
-
-  const handleCancel = () => {
-    setIsModalOpen(false);
-  };
-  const founderImage = PlaceHolderImages.find(
-    (img) => img.id === "founder-image"
-  );
 
   return (
     <section
-      className="p-16  container mx-auto rounded-2xl text-[#030229]"
-      style={{
-        position: "relative",
-        background: `
-      radial-gradient(circle at 20% 50%, rgba(139, 0, 0, 0.03) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, rgba(139, 0, 0, 0.02) 0%, transparent 50%),
-      #ffffff
-    `,
-        display: "flex",
-        alignItems: "center",
-      }}
-    >
-      <div>
-        <div className="mx-auto w-fit ">
-          <p onClick={showModal} className="text-base font-normal font-headline bg-[#8B0000] bg-opacity-5 px-10 py-2 rounded-[2rem] text-[#030229] cursor-pointer ">
-            OUR FOUNDER'S STORY
+      className="container mx-auto text-[#030229]" id="our-journey">
+      <div className="text-xl">
+        <div>
+          <div className=" w-[300px] h-[300px] p-6 rounded-full overflow-hidden" style={{
+            float: "right", marginLeft: "1rem",
+            marginBottom: "1rem"
+          }}>
+            <div className="inset-0 flex items-center justify-center">
+              <Image
+                src={MotherImg}
+                alt="Founder Image"
+                width={300}
+                height={300}
+                className="object-contain"
+              />
+            </div>
+          </div>
+          <p className="">
+            Born and raised in the rural village of <b>Bugangari, Rukungiri District, Uganda</b> , I learned early
+            that caring for elders is not charity it is <b>duty, identity, and love</b>. I watched my parents care for
+            my grandparents with patience, respect, and the quiet strength that defines African family life.
           </p>
+          <p>
+            Years later, I trained and worked as a  <b>Registered Nurse in Boston, USA</b> , spending over <b> 26
+              years</b> in geriatric care, home health, palliative, and hospice practice. In that system, I saw what
+            happens when compassion is supported by structure: <b> trained caregivers, clear standards,
+              strong ethics, and coordinated care </b> that protects dignity and independence.</p>
         </div>
-        <div className="grid lg:grid-cols-2 gap-12">
+        <p className="text-xl mt-4">
+          But every time I looked back home, I saw the painful contrast. In Uganda and across Africa
+          ageing remains a silent crisis, not because families do not care, but because families are asked to
+          manage complex care <b>without guidance, systems, or support</b>. </p>
+        <p className="text-xl mt-4">
+          That reality became deeply personal when my mother entered her eighties and began living with
+          multiple chronic conditions <b>hypertension, diabetes, arthritis, recurrent infections</b>  and the
+          frailty that can turn small problems into repeated hospital admissions. Each hospitalization
+          revealed something bigger than illness: the absence of geriatric home-care structures, the heavy
+          burden on women caregivers, and the ethical gap that often removes elders from decisions about
+          their own lives.</p>
+        <p className="text-xl mt-4">
+          I knew something had to change. So I brought care home simple, consistent, dignity-centered
+          support delivered with professionalism. The results were profound. My mother lived <b>four more years without a single hospitalization</b> , surrounded by comfort, respect, and love, until her final
+          years without a single hospitalization, surrounded by comfort, respect, and love, until her final
+          breath. That outcome was not luck. It was the power of organized home care.</p>
+        <p className="text-xl mt-4">
+          In 2021, I founded <b>Vantage Care Limited</b> to prove this model can work in Uganda at scale
+          training caregivers, strengthening families, and restoring dignity to elders. What began at my
+          mother’s bedside soon revealed a larger mission: Africa does not need more crisis care alone it
+          needs a <b>home-care system.</b></p>
+        <p className="text-xl mt-4">
+          That vision became <b>Home Care Alliance Africa (HOCA-A)</b> a pan-African movement to
+          professionalize compassion by building standards, workforce systems, safeguards, and
+          partnerships that make quality home-based elder care possible across the continent.
+          Today, HOCA-A is transforming elder care in Africa</p>
+        <p className="text-xl mt-4">
+          Because the promise is simple:
+          <ul className="list-disc pl-5 my-2 font-medium">
+            <li>No African elder should suffer for lack of care.</li>
+            <li>No caregiver should serve without recognition.</li>
+            <li>No family should carry this burden alone.</li>
+          </ul>
+          <p className="font-medium mt-6">Barnabas Nkore, RN</p>
+          <ul className="text-lg">
+            <li>Founder &amp; President, Home Care Alliance Africa (HOCA-A)</li>
+            <li>Founder &amp; CEO, Vantage Care Limited (Uganda)</li>
+            <li>Boston – Kampala</li>
+          </ul>
+        </p>
+      </div>
+      {/* <div className="grid lg:grid-cols-2 gap-12">
           <div className="flex flex-col justify-around">
             <h2 className="text-xl md:text-3xl !leading-10 font-headline font-medium capitalize text-[#030229] mt-3 md:mt-12">
               What began as my mother’s story has become Africa’s mission to{" "}
@@ -99,67 +131,8 @@ const FoundersStory = () => {
               </div>
             )}
           </div>
-        </div>
-      </div>
-      <Modal
-        closable={{ 'aria-label': 'Custom Close Button' }}
-        open={isModalOpen}
-        onOk={handleOk}
-        onCancel={handleCancel}
-        width={1000}
-        footer={
-          <Button type="primary" onClick={handleOk}>
-            Close
-          </Button>
-        }
-      >
-        <div className="p-4 text-[#030229]">
-          <h1 className="font-semibold text-2xl my-4">A Mother’s story - The Birth of a Movement</h1>
-          <p className="text-xl">
-            I was born in Bugangari, Rukungiri District, Uganda, where I learned the value of community
-            and compassion by watching my parents care for my grandparents. That early lesson in dignity
-            and family responsibility became the foundation of my life’s work.</p>
-          <p className="text-xl mt-4">
-            After migrating to the United States, I trained and served as a Registered Nurse in home health,
-            hospice, and palliative care for more than 25 years. In Boston, I saw the power of structured
-            home-care systems where trained caregivers, ethical standards, and compassion preserve
-            independence and dignity for the elderly.
-            Yet, each time I looked back home, I saw the opposite reality: families filled with love but
-            lacking systems to support ageing with dignity.</p>
-          <p className="text-xl mt-4">
-            When my mother turned eighty, she began battling chronic illnesses common among ageing
-            Africans hypertension, diabetes, arthritis, and frailty.
-            Like many elders, she was trapped in a
-            cycle of preventable hospitalizations. Together with my siblings we decided to care for her at
-            home with consistent, compassionate, and structured support. For four years, she lived
-            comfortably and never returned to the hospital until her peaceful passing.
-            That experience opened my eyes: <b>organized home care changes lives</b>. It wasn’t just her story it was Africa’s
-            story.</p>
-          <p className="text-xl mt-4">  In 2021, I founded <b>Vantage Care Limited Uganda</b>, the country’s first structured, professionally
-            managed home-care organization. Through Vantage Care, hundreds of young Ugandans have
-            been trained and employed as certified caregivers, restoring dignity to elders while creating
-            sustainable livelihoods for youth.</p>
-          <p className="text-xl mt-4">
-            That success led to a greater vision to expand the model beyond Uganda. This became <b>Home
-              Care Alliance Africa (HOCA-A)</b> : a Pan-African movement to professionalize compassion,
-            systematize care, and dignify ageing across Africa.
-            HOCA-A blends Boston’s clinical excellence with Africa’s communal caregiving spirit, creating
-            a bridge between personal experience and continental purpose.</p>
-          <div className="text-xl mt-4">
-            <h2 className="font-semibold text-2xl mb-3">HOCA-A exists to ensure that :</h2>
-            <ul className="list-disc pl-5">
-              <li>No African elder suffers for lack of care,</li>
-              <li>No caregiver serves without recognition,</li>
-              <li>No family carries this burden alone.</li>
-            </ul></div>
-          <i className="text-lg mt-6">
-            We envision Africa where older persons age gracefully at home, supported by trained
-            caregivers, informed families, and compassionate systems of care.
-          </i>
-          <p className="text-xl mt-2">Barnabas Nkore, RN</p>
-        </div>
-      </Modal>
-    </section>
+        </div> */}
+    </section >
   );
 };
 export default FoundersStory;

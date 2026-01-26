@@ -123,9 +123,9 @@ export default function LandingPage() {
                             Transforming Elder  <span className="text-[#8b0000]">Care Across Africa</span>
                         </h1>
                         <p className="hero-subtitle">
-                            Building professional, compassionate, and accredited systems of
-                            home-based and geriatric care — driven by African values and
-                            global standards.
+                            Uniting governments, providers, and partners to build trusted standards and professional
+                            caregiving systems for elders and families—rooted in African values and guided by global
+                            standards.
                         </p>
                         <Link href="/join-us" className="cta-button">
                             <span>Join Us Today</span>

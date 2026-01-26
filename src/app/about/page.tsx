@@ -10,6 +10,7 @@ import Board1Img from "../../assets/images/team/board1.png";
 import Board2Img from "../../assets/images/team/board2.png";
 import ConsultaImg from "../../assets/images/team/consultant.png";
 import PageHero from "@/components/PageHero";
+import FoundersStory from "@/components/home/founders-story";
 
 const teamMembers = [
   {
@@ -56,50 +57,50 @@ const teamMembers = [
   },
 ];
 
-const historyEvents = [
-  {
-    icon: <Rocket className="h-5 w-5 text-primary" />,
-    year: "2020",
-    title: "The Idea Was Born",
-    description:
-      "Vantage Care Limited Uganda has established a scalable, accredited, and professional homecare system, rooted in the founder’s personal caregiving experience.",
-  },
-  {
-    icon: <Building className="h-5 w-5 text-primary" />,
-    year: "2022",
-    title: "Founded Hoca-africa",
-    description:
-      "Hoca-africa was officially founded, establishing its mission to create a trusted ecosystem for home care.",
-  },
-  {
-    icon: <Users className="h-5 w-5 text-primary" />,
-    year: "2022",
-    title: "Trained 250+ Home Health Aides (HHAs)",
-    description:
-      "We proudly began serving our first communities, providing essential care and support to 100 families.",
-  },
-  {
-    icon: <Users className="h-5 w-5 text-primary" />,
-    year: "2022",
-    title: "Generates 100+ direct jobs,",
-    description:
-      "We proudly began serving our first communities, providing essential care and support to 100 families.",
-  },
-  {
-    icon: <Users className="h-5 w-5 text-primary" />,
-    year: "2022",
-    title: "First 100 Families Served ",
-    description:
-      "We proudly began serving our first communities, providing essential care and support to 100 families.",
-  },
-  {
-    icon: <Clock className="h-5 w-5 text-primary" />,
-    year: "Present",
-    title: "Expanding Our Reach",
-    description:
-      "We are actively expanding our network of caregivers and partners to bring quality home care to more communities across Africa.",
-  },
-];
+// const historyEvents = [
+//   {
+//     icon: <Rocket className="h-5 w-5 text-primary" />,
+//     year: "2020",
+//     title: "The Idea Was Born",
+//     description:
+//       "Vantage Care Limited Uganda has established a scalable, accredited, and professional homecare system, rooted in the founder’s personal caregiving experience.",
+//   },
+//   {
+//     icon: <Building className="h-5 w-5 text-primary" />,
+//     year: "2022",
+//     title: "Founded Hoca-africa",
+//     description:
+//       "Hoca-africa was officially founded, establishing its mission to create a trusted ecosystem for home care.",
+//   },
+//   {
+//     icon: <Users className="h-5 w-5 text-primary" />,
+//     year: "2022",
+//     title: "Trained 250+ Home Health Aides (HHAs)",
+//     description:
+//       "We proudly began serving our first communities, providing essential care and support to 100 families.",
+//   },
+//   {
+//     icon: <Users className="h-5 w-5 text-primary" />,
+//     year: "2022",
+//     title: "Generates 100+ direct jobs,",
+//     description:
+//       "We proudly began serving our first communities, providing essential care and support to 100 families.",
+//   },
+//   {
+//     icon: <Users className="h-5 w-5 text-primary" />,
+//     year: "2022",
+//     title: "First 100 Families Served ",
+//     description:
+//       "We proudly began serving our first communities, providing essential care and support to 100 families.",
+//   },
+//   {
+//     icon: <Clock className="h-5 w-5 text-primary" />,
+//     year: "Present",
+//     title: "Expanding Our Reach",
+//     description:
+//       "We are actively expanding our network of caregivers and partners to bring quality home care to more communities across Africa.",
+//   },
+// ];
 
 const coreValues = [
   {
@@ -163,7 +164,7 @@ const AboutPage = () => {
                   Strengthening the Future of Eldercare in Africa
                 </h2>
                 <p className="text-lg font-normal opacity-90">
-                  Home Care Alliance Africa (HOCA-A) is a Pan-African, not-for-profit alliance dedicated to
+                  Home Care Alliance Africa (HOCA-A) is a pan African, not-for-profit alliance dedicated to
                   developing <b>systems, standards, and regulatory frameworks</b> for home-based and geriatric care
                   across the continent.</p>
                 <p className="text-lg font-normal mb-4 opacity-90">
@@ -192,8 +193,8 @@ const AboutPage = () => {
                     Mission
                   </h3>
                   <p className="text-lg opacity-70">
-                    Transform eldercare in Africa through quality standards, professional home-based
-                    services, and systems ensuring dignity, safety, and health within communities.
+                    Build capacity for governments, partners and professionals for quality elderly and
+                    homecare services in Africa .
                   </p>
                 </div>
               </div>
@@ -204,8 +205,7 @@ const AboutPage = () => {
                     Vision
                   </h3>
                   <p className="text-lg opacity-70">
-                    Shaping tomorrow’s Africa with professional eldercare systems delivered by accredited,
-                    community-driven models.
+                    Universal access to quality home care services in Africa .
                   </p>
                 </div>
               </div>
@@ -265,8 +265,8 @@ const AboutPage = () => {
                     </h4>
                     <p className="text-primary-foreground/80">{member.role}</p>
                   </div>
-                  <div className="absolute inset-0 bg-[#EFF3ED]  p-6 flex flex-col justify-center items-center text-center text-[#030229] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <p className="text-sm">{member.description}</p>
+                  <div className="absolute inset-0 bg-[#EFF3ED] p-6 flex flex-col overflow-y-auto text-[#030229] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p className="text-sm text-left">{member.description}</p>
                   </div>
                 </div>
               ))}
@@ -281,12 +281,11 @@ const AboutPage = () => {
               <p className="text-[#8b0000] text-lg font-medium mb-6">
                 OUR JOURNEY
               </p>
-              <p className="mb-8 mt-3 text-2xl font-headline font-medium capitalize">
-                A brief history of our commitment to transforming elder care in
-                Africa.
+              <p className=" mt-3 text-2xl font-headline font-medium capitalize">
+                A Mother’s  <span className="text-[#8b0000]"> Story</span> — The Birth of a  <span className="text-[#8b0000]">Movement</span>
               </p>
             </div>
-            <div className="relative">
+            {/* <div className="relative">
               <div className="absolute left-1/2 -translate-x-1/2 w-0.5 h-full bg-border hidden md:block"></div>
               <div className="space-y-12">
                 {historyEvents.map((event, index) => (
@@ -322,7 +321,8 @@ const AboutPage = () => {
                   </div>
                 ))}
               </div>
-            </div>
+            </div> */}
+            < FoundersStory />
           </div>
         </section>
       </div>
