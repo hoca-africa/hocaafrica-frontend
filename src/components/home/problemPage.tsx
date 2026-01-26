@@ -49,7 +49,7 @@ const ProblemPage: React.FC = () => {
 
     var settings = {
         infinite: true,
-        slidesToShow: 3,
+        slidesToShow: 2,
         slidesToScroll: 1,
         autoplay: true,
         autoplaySpeed: 3000,
@@ -60,18 +60,19 @@ const ProblemPage: React.FC = () => {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
                     infinite: true,
                     dots: false,
                 },
             },
             {
-                breakpoint: 600,
+                breakpoint: 800,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2,
-                    initialSlide: 2,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    initialSlide: 1,
+                    infinite: true,
                 },
             },
             {
@@ -79,6 +80,7 @@ const ProblemPage: React.FC = () => {
                 settings: {
                     slidesToShow: 1,
                     slidesToScroll: 1,
+                    infinite: true,
                 },
             },
         ],
@@ -86,57 +88,57 @@ const ProblemPage: React.FC = () => {
 
     const challenges = [
         {
-            title: "The Elder Care and Health Crisis",
+            title: "Limited access to dependable long-term care at home",
             description:
-                "Older adults face growing health needs that communities are not equipped to handle.",
+                "Families often manage complex needs alone .",
             icon: <FaUserNurse />,
         },
         {
             title: "Heavy burden of chronic illness and disabilities",
             description:
-                "Rising noncommunicable diseases (hypertension, diabetes, stroke, cancer) affecting function and independence",
+                "Rising noncommunicable diseases (hypertension, diabetes, stroke, cancer) affecting function and independence .",
             icon: <FaHeartbeat />,
         },
         {
-            title: "Weak Healthcare Systems for Older Adults",
+            title: "Caregiving is undervalued and under-trained",
             description:
-                "Healthcare systems lack geriatric specialists, trained caregivers, and proper elder-care facilities.",
+                "Care work is widely informal, with limited training pathways and practical skills—raising safety risks .",
             icon: <FaHospitalAlt />,
         },
         {
-            title: "Urbanization and Family Dynamics",
+            title: "Elder rights and safeguarding gaps",
             description:
-                "Urban migration is weakening traditional family support, leaving many elderly people isolated.",
+                "Risk of neglect, abandonment, Ageism, financial exploitation, and abuse reduce access to dignified, patient-centered care.",
             icon: <FaCity />,
         },
         {
-            title: "Economic and Social Challenges",
+            title: "High out-of-pocket costs that push families into crisis",
             description:
-                "Many older adults live in poverty, lack pensions, and depend on overstretched family caregivers.",
+                "Older people may delay care because of cost, transport, or dependence on relatives.",
             icon: <FaMoneyBillWave />,
         },
         {
-            title: "Gendered Impact",
+            title: "Climate and public health shocks hit elders hardest",
             description:
-                "Women shoulder unpaid caregiving roles and older women face greater poverty and vulnerability.",
+                "Heat, floods, outbreaks, and displacement worsen chronic conditions in countries where systems are strained.",
             icon: <FaVenusMars />,
         },
         {
-            title: "Mental Health Concerns",
+            title: "Dementia, frailty, and mental health needs go unsupported",
             description:
-                "Mental health issues like dementia are rising, but awareness, support, and treatment remain limited.",
+                "Memory loss, (Dementia) is often misunderstood or stigmatized . Loneliness, grief, depression, and anxiety frequently go untreated .",
             icon: <FaBrain />,
         },
         {
-            title: "Increasing Disability & Dependency",
+            title: "A rapidly growing older population—without matching care systems",
             description:
-                "Chronic conditions and disabilities are increasing, leaving untrained families overwhelmed by care.",
+                "Africa’s older population is expanding fast, but most countries don’t yet have strong long-term care systems to match the need.",
             icon: <FaWheelchair />,
         },
         {
-            title: "Societal Impact",
+            title: "Weak continuity between hospitals and the home",
             description:
-                "Care burdens lower productivity, strain families, deepen gender inequality, and raise national costs.",
+                "Families receive little training on preventable complications (falls, infections wound care, mobility, nutrition, or medications errors) become common.",
             icon: <FaUsers />,
         },
     ];
@@ -162,7 +164,7 @@ const ProblemPage: React.FC = () => {
                             {challenges.map((challenge, index) => (
                                 <div
                                     key={index}
-                                    className="pl-[3rem] border-r-[1px] border-[#030229]  border-opacity-10  h-[15rem]"
+                                    className=" p-4  md:pl-[3rem] md:pr-10 border-r-[1px] border-[#030229]  border-opacity-10  h-[15rem]"
                                 >
                                     <div className="w-12 h-12 rounded-full bg-[#8B0000] p-3 text-white flex items-center justify-center mb-6">
                                         {challenge.icon}
