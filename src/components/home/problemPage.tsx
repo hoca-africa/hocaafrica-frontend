@@ -16,7 +16,6 @@ import {
     FaUsers,
 } from "react-icons/fa";
 import { GoArrowLeft, GoArrowRight, GoArrowUpRight } from "react-icons/go";
-import FoundersStory from "./founders-story";
 
 const ProblemPage: React.FC = () => {
     // Custom Arrow Components
@@ -93,9 +92,9 @@ const ProblemPage: React.FC = () => {
             icon: <FaUserNurse />,
         },
         {
-            title: "Rise in Chronic Diseases",
+            title: "Heavy burden of chronic illness and disabilities",
             description:
-                "Chronic illnesses like hypertension, diabetes, and dementia are rising and require long-term care.",
+                "Rising noncommunicable diseases (hypertension, diabetes, stroke, cancer) affecting function and independence",
             icon: <FaHeartbeat />,
         },
         {
@@ -142,7 +141,7 @@ const ProblemPage: React.FC = () => {
         },
     ];
     return (
-        <section className="py-16 sm:py-24 bg-[#EFF3ED] relative lg:min-h-screen ">
+        <section className="py-16 sm:py-24 bg-[#FFFFFF] text-[#030229]">
             <style>{`
                 .slider-container .slick-prev,
                 .slider-container .slick-next {
@@ -185,9 +184,6 @@ const ProblemPage: React.FC = () => {
                         <GoArrowUpRight size={24} />
                     </span>
                 </a>
-                <div className="absolute top-[50%] z-9999 hidden lg:block">
-                    <FoundersStory />
-                </div>
             </div>
         </section>
     );
