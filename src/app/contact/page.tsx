@@ -28,12 +28,12 @@ const ContactPage = () => {
     {
       icon: <LiaPhoneVolumeSolid size={30} color="#8B0000" />,
       descr: "Call Us",
-      value: "+1 781 244 5912",
+      value: " +256 707672024 /+256 760000094",
     },
     {
       icon: <BsEnvelopeAt size={30} color="#8B0000" />,
       descr: "Get in Touch",
-      value: "info@hoca-africa.org",
+      value: "hocaafrica@gmail.com",
     },
     {
       icon: <SlLocationPin size={30} color="#8B0000" />,
@@ -78,7 +78,9 @@ const ContactPage = () => {
                     </div>
                     <div className="text-left">
                       <p className="text-sm">{data.descr}</p>
-                      <p className="font-semibold text-xl">{data.value}</p>
+                      <p className="font-semibold text-xl whitespace-pre-line">
+                        {data.value.replace(/\//g, '\n')}
+                      </p>
                     </div>
                   </div>
                 ))}

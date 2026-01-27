@@ -105,27 +105,33 @@ const teamMembers = [
 const coreValues = [
   {
     title: "Dignity",
-    descr: "We affirm the inherent worth of every individual — especially older persons, caregivers, and community members — ensuring that all actions, services, and communications promote respect, compassion, and human value.",
+    descr:
+      "We affirm the inherent worth of every individual — especially older persons, caregivers, and community members — ensuring that all actions, services, and communications promote respect, compassion, and human value.",
   },
   {
     title: "Integrity",
-    descr: "We operate with honesty, transparency, and accountability in all decisions and partnerships, maintaining public trust and upholding the highest ethical standards in leadership and financial management.",
+    descr:
+      "We operate with honesty, transparency, and accountability in all decisions and partnerships, maintaining public trust and upholding the highest ethical standards in leadership and financial management.",
   },
   {
     title: "Innovation",
-    descr: "We encourage creativity and the use of new ideas, technologies, and models of care to improve the quality, accessibility, and sustainability of elder-care systems in Africa.",
+    descr:
+      "We encourage creativity and the use of new ideas, technologies, and models of care to improve the quality, accessibility, and sustainability of elder-care systems in Africa.",
   },
   {
     title: "Service Excellence",
-    descr: "We strive for quality, professionalism, and continuous improvement in all programs and operations, ensuring that every service reflects commitment, empathy, and competence.",
+    descr:
+      "We strive for quality, professionalism, and continuous improvement in all programs and operations, ensuring that every service reflects commitment, empathy, and competence.",
   },
   {
     title: "Value for Money",
-    descr: "We pursue efficiency and prudent use of resources, guaranteeing that every shilling and dollar invested in HOCA-A yields measurable social and health impact for African communities.",
+    descr:
+      "We pursue efficiency and prudent use of resources, guaranteeing that every shilling and dollar invested in HOCA-A yields measurable social and health impact for African communities.",
   },
   {
     title: "Equitable Partnerships",
-    descr: "We believe in collaboration built on mutual respect, fairness, and shared benefit — engaging governments, institutions, communities, and the private sector as co-creators of Africa’s care future.",
+    descr:
+      "We believe in collaboration built on mutual respect, fairness, and shared benefit — engaging governments, institutions, communities, and the private sector as co-creators of Africa’s care future.",
   },
 ];
 
@@ -143,75 +149,70 @@ const AboutPage = () => {
         <section className="py-16 sm:py-24">
           <div className="container">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <div
-                className="relative aspect-video rounded-lg overflow-hidden bg-center bg-cover md:mt-12"
-                style={{ backgroundImage: `url(${ForElders.src})` }}
-                data-ai-hint="caregiver elderly"
-              >
-                <div className="absolute inset-0 bg-black/60"></div>
-                <div className="relative z-10 flex items-end p-4 h-full">
-                  <audio
-                    src="/audios/ttsreader_home-care.mp3"
-                    controls
-                    autoPlay
-                    className="w-full bg-white/70 rounded-3xl"
-                  />
+              <div>
+                <div
+                  className="relative aspect-video rounded-lg overflow-hidden bg-center bg-cover fmd:mt-12"
+                  style={{ backgroundImage: `url(${ForElders.src})` }}
+                  data-ai-hint="caregiver elderly"
+                >
+                  <div className="absolute inset-0 bg-black/60"></div>
+                  <div className="relative z-10 flex items-end p-4 h-full">
+                    <audio
+                      src="/audios/ttsreader_home-care.mp3"
+                      controls
+                      autoPlay
+                      className="w-full bg-white/70 rounded-3xl"
+                    />
+                  </div>
                 </div>
+                <p className="text-lg font-normal mt-4 md:mt-12 opacity-90">
+                  We envision a continent where every older persons can age with
+                  dignity, supported by skilled caregivers and strong community
+                  systems.
+                </p>
               </div>
+
               <div id="who-we-are">
                 <p className="text-[#8b0000] text-lg font-medium">WHO WE ARE</p>
                 <h2 className="text-3xl md:text-4xl font-semibold font-headline my-4 text-[#030229] !leading-[3rem]">
                   Strengthening the Future of Eldercare in Africa
                 </h2>
                 <p className="text-lg font-normal opacity-90">
-                  Home Care Alliance Africa (HOCA-A) is a pan African, not-for-profit alliance dedicated to
-                  developing <b>systems, standards, and regulatory frameworks</b> for home-based and geriatric care
-                  across the continent.</p>
-                <p className="text-lg font-normal mb-4 opacity-90">
-                  HOCA-A serves as Africa’s technical and regulatory reference body for home-care and
-                  elderly-care systems, working hand-in-hand with <b>Ministries of Health, training institutions,
-                    faith-based organizations,</b>  and <b>community networks</b>.
+                  Homecare Alliance Africa (HOCA-A) is a pan African, not-for-profit alliance
+                  dedicated to developing systems, standards, and regulatory frameworks for the home-based and
+                  geriatric care industry across the African Continent.
                 </p>
-                <i className="text-lg font-normal mb-4 opacity-90">
-                  We envision a continent where every older persons can age with
-                  dignity, supported by skilled caregivers and strong community
-                  systems.
-                </i>
+                <div className="grid md:grid-cols-2 gap-4 mt-4 md:mt-16">
+                  <div>
+                    <h3 className="text-2xl font-semibold font-headline mb-2 flex gap-3">
+                      <IoIosCheckmarkCircle size={28} color="#8b0000" /> Our
+                      Mission
+                    </h3>
+                    <p className="text-lg opacity-90">
+                      Build capacity for governments, partners and professionals
+                      for quality elderly and homecare services in Africa .
+                    </p>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-semibold font-headline mb-2 flex gap-3">
+                      <IoIosCheckmarkCircle size={28} color="#8b0000" /> Our
+                      Vision
+                    </h3>
+                    <p className="text-lg opacity-90">
+                      Universal access to quality home care services in Africa .
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Mission, Vision, Values Section */}
-        <section className="py-16">
+        {/* Values Section */}
+        <section className="py-u4">
           <div className="container">
-            <div className="grid md:grid-cols-2 gap-10 md:gap-24 mb-12">
-              <div className="flex items-start gap-4 ">
-                <div>
-                  <h3 className="text-2xl font-semibold font-headline mb-2 flex gap-3">
-                    <IoIosCheckmarkCircle size={28} color="#8b0000" /> Our
-                    Mission
-                  </h3>
-                  <p className="text-lg opacity-70">
-                    Build capacity for governments, partners and professionals for quality elderly and
-                    homecare services in Africa .
-                  </p>
-                </div>
-              </div>
-              <div className="flex items-start gap-4">
-                <div>
-                  <h3 className="text-2xl font-semibold font-headline mb-2 flex gap-3">
-                    <IoIosCheckmarkCircle size={28} color="#8b0000" /> Our
-                    Vision
-                  </h3>
-                  <p className="text-lg opacity-70">
-                    Universal access to quality home care services in Africa .
-                  </p>
-                </div>
-              </div>
-            </div>
             <div>
-              <h3 className="text-2xl text-center font-semibold font-headline mb-2 flex items-center justify-center gap-3">
+              <h3 className="text-2xl text-center items-center justify-center  font-semibold font-headline mb-2 flex gap-3">
                 <IoIosCheckmarkCircle size={28} color="#8b0000" />
                 Our Core Values
               </h3>
@@ -236,17 +237,40 @@ const AboutPage = () => {
         </section>
 
         {/* Our Team Section */}
-        <section className="py-16 sm:py-24" id="our-team">
+        <section className="py-16 sm:py-32" id="our-team">
           <div className="container">
-            <div className="text-center mb-12">
-              <p className="text-[#8b0000] text-lg font-medium mb-6">
+            <div className="mb-12">
+              <p className="text-[#8b0000] text-lg font-medium mb-6 text-center ">
                 OUR TEAM
               </p>
-              <h2 className="text-3xl md:text-4xl font-semibold font-headline capitalize">
-                Our Leadership Expertise
+              <p className="my-4 text-xl">
+                HOCA-A’s leadership brings{" "}
+                <b className="font-medium">
+                  26+ years of combined local and international experience
+                </b>{" "}
+                in geriatric care, hospice and palliative care, research,
+                education, administration, finance, and communications—with
+                representation from policy makers, diplomats, and senior citizens
+                to ensure credible, practical, and culturally grounded solutions.
+              </p>
+              <div className="font-medium font-headline bg-[#8B0000] bg-opacity-5 rounded-[2rem] text-xl text-center w-fit mx-auto px-6 py-6 my-20 max-w-[75%]">
+                <p className="font-medium my-2">OUR GOAL</p>
+                <p className=" opacity-80">
+                  {" "}
+                  Build a credible home-care ecosystem that supports families,
+                  strengthens health systems, and ensures older Africans age with
+                  dignity wherever they live. We build the systems that make home
+                  care trustworthy: standards, workforce development, quality
+                  assurance, and government collaboration.
+                </p>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-semibold font-headline capitalize text-center my-4 text-[#030229] !leading-[3rem]">
+                Meet Our Leadership Expertise
               </h2>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-3 lg:mt-10">
               {teamMembers.map((member) => (
                 <div
                   key={member.name}
@@ -282,7 +306,8 @@ const AboutPage = () => {
                 OUR JOURNEY
               </p>
               <p className=" mt-3 text-2xl font-headline font-medium capitalize">
-                A Mother’s  <span className="text-[#8b0000]"> Story</span> — The Birth of a  <span className="text-[#8b0000]">Movement</span>
+                A Mother’s <span className="text-[#8b0000]"> Story</span> — The
+                Birth of a <span className="text-[#8b0000]">Movement</span>
               </p>
             </div>
             {/* <div className="relative">
@@ -322,7 +347,7 @@ const AboutPage = () => {
                 ))}
               </div>
             </div> */}
-            < FoundersStory />
+            <FoundersStory />
           </div>
         </section>
       </div>

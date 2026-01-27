@@ -4,6 +4,19 @@ import HeaderPage from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
+import { Poppins, Open_Sans } from 'next/font/google';
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700', '800'],
+  variable: '--font-poppins',
+});
+
+const openSans = Open_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  variable: '--font-open-sans',
+});
 
 export const metadata: Metadata = {
   title: {
@@ -34,12 +47,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet"></link>
-      </head>
+    <html lang="en"
+      className={cn(
+        'scroll-smooth',
+        poppins.variable,
+        openSans.variable,
+      )} >
       <body
         className={cn(
           'min-h-screen bg-background font-body antialiased'

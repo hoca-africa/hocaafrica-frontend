@@ -61,7 +61,7 @@ const FoundersStory = () => {
           professionalize compassion by building standards, workforce systems, safeguards, and
           partnerships that make quality home-based elder care possible across the continent.
           Today, HOCA-A is transforming elder care in Africa</p>
-        <p className="text-xl mt-4">
+        <div className="text-xl mt-4">
           Because the promise is simple:
           <ul className="list-disc pl-5 my-2 font-medium">
             <li>No African elder should suffer for lack of care.</li>
@@ -74,7 +74,7 @@ const FoundersStory = () => {
             <li>Founder &amp; CEO, Vantage Care Limited (Uganda)</li>
             <li>Boston – Kampala</li>
           </ul>
-        </p>
+        </div>
       </div>
     </section >
   );
