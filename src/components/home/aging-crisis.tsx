@@ -10,16 +10,16 @@ const AgingCrisis = () => {
             AFRICAʼS AGING CRISIS
           </p>
         </div>
-        <div className="grid lg:grid-cols-2 gap-6 mt-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 mt-12 items-center">
           <div>
-            <p className="text-xl md:text-3xl !leading-10 font-headline font-meddium capitalize text-[#030229]">
+            <p className="text-xl md:text-2xl !leading-10 font-headline font-medium capitalize text-[#030229]">
               Africaʼs elderly population is projected to triple  from <span className="text-[#8b0000]">74 million in 2020 </span> to <span className="text-[#8b0000]">235 million by 2050</span>.
               Despite this growth, home care services remain underdeveloped, leaving millions of elderly
               individuals without access to professional care.
             </p>
           </div>
           <div className="flex justify-center">
-            <div style={{ background: "linear-gradient(to left, #EFF3ED, #ffffff)", padding: "20px", borderRadius: "12px", borderRight: "3px solid #c39c1d", fontFamily: "Poppins", color: "#030229" }}>
+            <div style={{ background: "linear-gradient(to left, #EFF3ED, #ffffff30)", padding: "20px", borderRadius: "12px", fontFamily: "Poppins", color: "#030229", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)" }}>
               <div style={{ display: "flex", flexWrap: "wrap", alignItems: "center", gap: "30px", justifyContent: "center" }}>
                 {/* Left side: Bar Chart */}
                 <div style={{ flex: 1, minWidth: "300px" }}>

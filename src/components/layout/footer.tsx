@@ -63,11 +63,11 @@ export function Footer() {
               <li className="font-normal">
                 {/* Email link */}
                 <a
-                  href="mailto:info@hoca-africa.org"
+                  href="mailto:hocaafrica@gmail.com"
                   className="hover:text-primary flex items-center gap-2 whitespace-nowrap"
                 >
                   <BsEnvelopeAt size={18} />
-                  info@hoca-africa.org
+                  hocaafrica@gmail.com
                 </a>
               </li>
               <li className="font-normal">
@@ -79,7 +79,7 @@ export function Footer() {
                   className="hover:text-primary flex items-center gap-2 whitespace-nowrap"
                 >
                   <LiaPhoneVolumeSolid size={18} />
-                  +1 781 244 5912
+                  +1 781 244 5912 / +256 7076 72024
                 </a>
               </li>
               <li className="font-normal">

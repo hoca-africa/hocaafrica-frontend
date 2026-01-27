@@ -7,38 +7,72 @@ import MinistrLogo from '../../assets/images/logos/ugandaministr.png';
 import MoHLogo from '../../assets/images/logos/moh-ug.png';
 import VintageLogo from '../../assets/images/logos/vintage.png';
 import TrustedLogo from '../../assets/images/logos/trusted.png';
-import AntikyLogo from '../../assets/images/logos/Antikythera_Logo.png';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const partners = [
-  { name: "Vintagecare", image: VintageLogo },
-  { name: "My Trusted Companion Inc.", image: TrustedLogo },
-  { name: "EdgeLife", image: EdgelifeLogo },
-  { name: "Antikythera", image: AntikyLogo },
-  { name: "Ministry of Education", image: MinistrLogo },
-  { name: "Myriad USA", image: MyriaLogo },
-  { name: "MoH-ug", image: MoHLogo },
-];
-
 const PartnersCarousel = () => {
+  const partners = [
+    {
+      name: "Vintagecare",
+      title: 'Vantage Care Uganda Ltd',
+      site: 'www.vantagecare.co',
+      descr: 'Across Africa, policy without an operating model can fail to deliver impact. HOCA-A’s approach is to pair standards development with tested implementation pathways so governments, donors, and providers can see what quality home care looks like in practice.',
+      image: VintageLogo
+    },
+    {
+      name: "My Trusted Companion Inc.",
+      title: 'MyTrustedCompanion',
+      site: 'www.vantagecareinc.com',
+      descr: 'MyTrustedCompanion partners with HOCA-A to benchmark non-medical home care operations against global standards—strengthening quality, safety, and professionalism in the African context.',
+      image: TrustedLogo
+    },
+    {
+      name: "EdgeLife",
+      title: 'Edgelife Healthcare Inc.',
+      site: 'www.edgelifehealth.com',
+      descr: 'Through its partnership with Edgelife Healthcare Inc. (U.S., Medicare-accredited), HOCA-A draws on internationally regulated home care standards, policies, and quality systems—contextualized for African implementation and scale.',
+      image: EdgelifeLogo
+    },
+    {
+      name: "Ministry of Education",
+      title: 'Ministry of Education and Sports(MoES)',
+      site: '',
+      descr: 'The Ministry of Education and Sports (MoES) is working with HOCA-A, through its strategic implementation partner Vantage Care Limited (VCL), to strengthen the accreditation and quality assurance of home-care training curricula. This partnership supports the development of a professional, standardized home-care workforce aligned with national education requirements and global best practice.',
+      image: MinistrLogo
+    },
+    {
+      name: "Myriad USA",
+      title: 'Myriad USA',
+      site: 'www.myriadusa.org',
+      descr: 'Myriad USA partners with HOCA-A under an MoU to mobilize U.S. charitable giving through the “Elder Care Fund for Africa,” supporting HOCA-A projects in compliance with U.S. tax laws.',
+      image: MyriaLogo
+    },
+    {
+      name: "MoH-ug",
+      title: 'Ministry Of Health- Uganda',
+      site: 'www.moh.gov.ug',
+      descr: 'THOCA-A has an MoU framework with Uganda’s Ministry of Health, providing technical collaboration to strengthen home-based and geriatric care systems through standards development, workforce training, quality improvement, and evidence-informed implementation.',
+      image: MoHLogo
+    },
+  ];
 
   const settings = {
     dots: false,
     infinite: true,
     slidesToShow: 3,
     slidesToScroll: 1,
+    initialSlide: 0,
     autoplay: true,
-    speed: 5000,
-    autoplaySpeed: 100,
+    speed: 20000,
+    autoplaySpeed: 0,
     cssEase: "linear",
     responsive: [
       {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToScroll: 1,
           infinite: true,
           dots: true,
         },
@@ -47,8 +81,9 @@ const PartnersCarousel = () => {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToScroll: 1,
           initialSlide: 2,
+          centerMode: true,
         },
       },
       {
@@ -56,6 +91,7 @@ const PartnersCarousel = () => {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
+          centerMode: true,
         },
       },
     ],
@@ -65,25 +101,49 @@ const PartnersCarousel = () => {
     <section id="partners" className="py-6 sm:py-10 bg-[#EFF3ED90]"
     >
       <div className="container mx-auto">
-        <div className=" 2mb-4">
-          <h1 className="text-2xl text-[#030229]">Thank You to Our Partners</h1>
+        <div className="mb-4">
+          <h1 className="text-2xl text-[#030229] my-10">Thanks to Our Local and Global Partners</h1>
         </div>
         <div className="slider-container">
           <Slider {...settings}>
             {partners.map((partner, index) => (
-              <div className="max-w-[25rem] max-h-[7rem] mx-auto py-4 flex items-center justify-center">
-                <Image
-                  src={partner.image}
-                  alt={partner.name}
-                  width={200}
-                  height={100}
-                />
+              <div key={index} className="px-3">
+                <div
+
+                  className="rounded-xl border bg-[#ffffff80]   h-full px-4 py-6 cursor-pointer"
+                // style={{
+                //   boxShadow: "0 8px 16px rgba(3, 2, 41, 0.2), 0 4px 8px rgba(3, 2, 41, 0.15)",
+                //   transition: "box-shadow 0.3s ease"
+                // }}
+                // onMouseEnter={(e) => {
+                //   e.currentTarget.style.boxShadow = "0 8px 16px rgba(3, 2, 41, 0.2), 0 4px 8px rgba(3, 2, 41, 0.15)";
+                // }}
+                // onMouseLeave={(e) => {
+                //   e.currentTarget.style.boxShadow = "0 4px 8px rgba(3, 2, 41, 0.15), 0 2px 4px rgba(3, 2, 41, 0.1)";
+                // }}
+                >
+                  <div className="flex gap-2">
+                    <div className="w-24 h-16 flex items-center justify-center">
+                      <Image
+                        src={partner.image}
+                        alt={partner.name}
+                        width={96}
+                        height={64}
+                        className="object-contain"
+                      />
+                    </div>
+                    <div className="mt-2">
+                      <h1 className="font-medium  text-base">{partner.title}</h1>
+                      <a className="text-sm" href={`https://${partner.site}`} target="_blank" rel="noopener noreferrer">{partner.site}</a>
+                    </div>
+                  </div>
+                  <p className="mt-4 opacity-70 text-sm font-normal line-clamp-4 hover:line-clamp-none transition-all">{partner.descr}</p></div>
               </div>
             ))}
           </Slider>
         </div>
       </div>
-    </section >
+    </section>
   );
 }
 export default PartnersCarousel;
