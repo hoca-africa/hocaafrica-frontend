@@ -9,10 +9,32 @@ import FinanceImg from "../../assets/images/team/finance.png";
 import Board1Img from "../../assets/images/team/board1.png";
 import Board2Img from "../../assets/images/team/board2.png";
 import ConsultaImg from "../../assets/images/team/consultant.png";
+import AsifImg from "../../assets/images/team/Asif-Merchant-MD.jpg";
+import VivianImg from "../../assets/images/team/Vivian.png";
 import PageHero from "@/components/PageHero";
 import FoundersStory from "@/components/home/founders-story";
 
 const teamMembers = [
+  {
+    name: "Dr. David M. Wahl, MD, MPH",
+    role: "Board Member",
+    image: Board1Img,
+    description:
+      "Dr. David M. Wahl is an American Family Physician and Geriatric Care Advocate dedicated to accessible, patient-centered elder care. Trained at George Washington University and Boston University, he began in community family practice before pioneering house call services for frail elders and extending care to nursing homes and surrounding communities. With an MPH, he has led HIV outreach, diabetes education, and cultural health initiatives, while mentoring medical students and providing CPR/First Aid training. Dr. Wahl is recognized for his compassion, innovation, and commitment to honoring the dignity of older adults across diverse healthcare settings.",
+  },
+  {
+    name: "Patricia M. Anastasia, RN",
+    role: "Board Member",
+    image: Board2Img,
+    description:
+      "Patricia M. Anastasia, RN, is a versatile healthcare and spiritual professional with over 30 years of experience as a registered nurse, paramedic, Reiki Master, ordained minister, and massage therapist. She specializes in elder care, wound and continence management, and end-of-life support, integrating clinical expertise with holistic healing. Patricia is the founder of Anastasia’s Health Happenings, where she trains healthcare providers and the public in First Aid, CPR, wound care, and caregiver self-care. Dedicated to both people and animals, she champions dignity, wellness, and empowerment through her unique, integrative approach to caregiving and patient support.",
+  },
+  {
+    name: "Dr. Asif Merchant, MD, FACP, CMD, C.P.E",
+    role: "Board Member",
+    image: AsifImg,
+    description: ' A board-certified physician in Internal Medicine, Geriatric Medicine, and Hospice & Palliative Care, with advanced training in the U.S. after graduating from Bombay University (K.J. Somaiya Medical College). He completed an Internal Medicine residency and Geriatric Medicine fellowship at North Shore University / Long Island Jewish Medical Center (New York), and later earned a Medical Education fellowship at Harvard Medical School—reflecting his commitment to clinical excellence, leadership, and training the next generation of clinicians. As a Board Member of Home Care Alliance Africa (HOCA-A), Dr. Merchant brings deep expertise in elder care quality, post-acute systems, and standards-based practice. Professionally, he is the Chief of Geriatrics and Extended Care Network at Newton-Wellesley Hospital, a Partner at New England Community Medical Services (post-acute care), and Medical Director for multiple nursing homes and a hospice in the Greater Boston area. He holds faculty appointments including Harvard Medical School and serves as an Associate Clinical Professor at Tufts School of Medicine, with multiple publications. A recognized leader in health policy and quality improvement, Dr. Merchant chairs the Geriatrics Committee of the Massachusetts Medical Society, serves on committees within the Massachusetts Health & Hospital Association, and has contributed to public discourse through interviews with major media outlets (e.g., CNN, MSNBC, The Washington Post, Boston Globe). He was appointed in September 2020 to Governor Charlie Baker’s Advisory Group for COVID-19 Vaccination in Massachusetts. With over two decades of leadership in AMDA (The Society for Post-Acute and Long-Term Care Medicine), he helped revive and grow the Massachusetts chapter into the regional Greater New England Society of Post-Acute and Long-Term Care (GNES), where he served as Past President, and he has supported national committees shaping physician competencies, quality metrics, advocacy, and public policy.'
+  },
   {
     name: "Barnabas Nkore, RN",
     role: "CEO & Founder",
@@ -35,25 +57,17 @@ const teamMembers = [
       "Ronald Tumusiimi is a finance and strategic management expert with 13+ years of experience in grant acquisition, nonprofit finance, and sustainable funding models. As Director of Fundraising and Finance at the Home Care Alliance Africa (HOCA-A), he drives financial strategy to secure long-term sustainability in eldercare services across the continent. Ronald has mobilized and managed over $2 million for organizations in healthcare, education, and agribusiness. He is also founder of ZoeNet Consult and co-founder of ADAI Labz. With an MBA in Finance and PMP certification, he champions youth empowerment, digital innovation, and inclusive development in Africa.",
   },
   {
-    name: "Dr. David M. Wahl, MD, MPH",
-    role: "Board Member",
-    image: Board1Img,
-    description:
-      "Dr. David M. Wahl is an American Family Physician and Geriatric Care Advocate dedicated to accessible, patient-centered elder care. Trained at George Washington University and Boston University, he began in community family practice before pioneering house call services for frail elders and extending care to nursing homes and surrounding communities. With an MPH, he has led HIV outreach, diabetes education, and cultural health initiatives, while mentoring medical students and providing CPR/First Aid training. Dr. Wahl is recognized for his compassion, innovation, and commitment to honoring the dignity of older adults across diverse healthcare settings.",
-  },
-  {
-    name: "Patricia M. Anastasia, RN",
-    role: "Board Member",
-    image: Board2Img,
-    description:
-      "Patricia M. Anastasia, RN, is a versatile healthcare and spiritual professional with over 30 years of experience as a registered nurse, paramedic, Reiki Master, ordained minister, and massage therapist. She specializes in elder care, wound and continence management, and end-of-life support, integrating clinical expertise with holistic healing. Patricia is the founder of Anastasia’s Health Happenings, where she trains healthcare providers and the public in First Aid, CPR, wound care, and caregiver self-care. Dedicated to both people and animals, she champions dignity, wellness, and empowerment through her unique, integrative approach to caregiving and patient support.",
-  },
-  {
     name: "Dr. Rosemary Kusaba Byanyima",
     role: "Strategic & Policy Advisor",
     image: ConsultaImg,
     description:
       "Dr. Rosemary Kusaba Byanyima is the Executive Director of Mulago National Referral Hospital, Uganda’s leading public hospital. A physician, radiologist, and seasoned healthcare administrator, she has served Mulago since 1993 in roles including Head of Radiology, Clinical Head of Diagnostics, Deputy Executive Director, and Acting Executive Director before her 2024 appointment by President Yoweri Museveni. She holds medical degrees from Makerere University and an Executive MBA from ESAMI. Beyond Mulago, Dr. Byanyima serves on the boards of the Uganda Heart Institute, Uganda Cancer Institute, and National Drug Authority, and is a Visiting Professor of Radiology at Mbarara University.",
+  },
+  {
+    name: "Vivian Kobusingye Birchall, MSc",
+    role: "Consultant, Communications & Strategic Engagement",
+    image: VivianImg,
+    description: 'Vivian Kobusingye Birchall, MSc is the Founder and CEO of HealthCare Blind Spots Consulting, a strategic communications and advisory firm focused on identifying and addressing overlooked gaps (“blind spots”) in global health systems. A Harvard Medical School graduate with an MSc in Media, Medicine, and Health, she blends evidence-based communication with real-world program leadership to strengthen the intersection of innovation, policy, and public engagement. Vivian serves on the Global Health Catalyst (GHC) team alongside Harvard and Dana-Farber Cancer Institute partners, leading communications that convene governments, academia, and industry to advance equitable access to care. Her work includes UN General Assembly (UNGA)-related dialogues and multi-stakeholder engagement on sustainable health financing and cross-border collaboration. She recently coordinated Uganda’s first Esophageal Cancer Symposium and Stent Insertion Workshop, bringing together the Uganda Cancer Institute, AfrECC, Olympus, Kyabirwa Surgical Center, and the Ugandan Embassy in Washington, D.C., to expand clinical capacity and awareness. She has also supported Uganda’s health security efforts through a technical delegation to the University of Nebraska Medical Center, advancing simulation-based preparedness and implementation partnerships. Through her television programs HealthCare Blind Spots and Africa2U on Acton TV, Vivian elevates conversations with policymakers, clinicians, and scientists translating complex health challenges into practical insight and action. She is driven by a clear purpose: to make health information, innovation, and systems more inclusive, effective, and responsive to the people they serve.'
   },
 ];
 
