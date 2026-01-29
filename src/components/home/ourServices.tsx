@@ -58,15 +58,19 @@ const OurServicesPreview = () => {
           {services.map((service) => (
             <Card
               key={service.title}
+              style={{
+                boxShadow:
+                  "0 1px 3px rgba(0,0,0,0.08), 0 4px 12px rgba(0,0,0,0.06)",
+              }}
               className="overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-background"
             >
               <CardHeader>
-                <div className="p-3  rounded-full bg-[#8B000010] h-[4rem] w-[4rem] mb-6">
+                <div className="p-2  rounded-full bg-[#8B000010] h-[3rem] w-[3rem] mb-2 flex items-center justify-center">
                   <Image
                     src={service.image}
                     alt="Policy-Standards"
-                    width={64}
-                    height={64}
+                    width={54}
+                    height={54}
                   />
                 </div>
                 <CardTitle className="font-headline !leading-normal">

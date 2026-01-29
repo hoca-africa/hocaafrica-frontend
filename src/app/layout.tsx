@@ -5,6 +5,7 @@ import { Footer } from '@/components/layout/footer';
 import { Toaster } from '@/components/ui/toaster';
 import { cn } from '@/lib/utils';
 import { Poppins, Open_Sans } from 'next/font/google';
+import { Suspense } from 'react';
 
 const poppins = Poppins({
   subsets: ['latin'],
