@@ -17,7 +17,7 @@ const PartnersCarousel = () => {
       name: "Vintagecare",
       title: 'Vantage Care Uganda Ltd',
       site: 'www.vantagecare.co',
-      descr: 'Across Africa, policy without an operating model can fail to deliver impact. HOCA-A’s approach is to pair standards development with tested implementation pathways so governments, donors, and providers can see what quality home care looks like in practice.',
+      descr: 'Vantage Care Uganda Ltd (VCL) is a Uganda-based home care provider and training platform established to deliver professional home-based care, develop a trained caregiver workforce, and reduce avoidable hospital readmissions through continuity of care after discharge.',
       image: VintageLogo
     },
     {
@@ -67,6 +67,7 @@ const PartnersCarousel = () => {
     speed: 20000,
     autoplaySpeed: 0,
     cssEase: "linear",
+    pauseOnHover: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -110,17 +111,7 @@ const PartnersCarousel = () => {
               <div key={index} className="px-3">
                 <div
 
-                  className="rounded-xl border bg-[#ffffff80]   h-full px-4 py-6 cursor-pointer"
-                // style={{
-                //   boxShadow: "0 8px 16px rgba(3, 2, 41, 0.2), 0 4px 8px rgba(3, 2, 41, 0.15)",
-                //   transition: "box-shadow 0.3s ease"
-                // }}
-                // onMouseEnter={(e) => {
-                //   e.currentTarget.style.boxShadow = "0 8px 16px rgba(3, 2, 41, 0.2), 0 4px 8px rgba(3, 2, 41, 0.15)";
-                // }}
-                // onMouseLeave={(e) => {
-                //   e.currentTarget.style.boxShadow = "0 4px 8px rgba(3, 2, 41, 0.15), 0 2px 4px rgba(3, 2, 41, 0.1)";
-                // }}
+                  className="rounded-xl border bg-[#ffffff80]  h-full px-4 py-6 cursor-pointer"
                 >
                   <div className="flex gap-2">
                     <div className="w-24 h-16 flex items-center justify-center">
@@ -134,7 +125,7 @@ const PartnersCarousel = () => {
                     </div>
                     <div className="mt-2">
                       <h1 className="font-medium  text-base">{partner.title}</h1>
-                      <a className="text-sm" href={`https://${partner.site}`} target="_blank" rel="noopener noreferrer">{partner.site}</a>
+                      <a className="text-sm text-blue-500 hover:underline" href={`https://${partner.site}`} target="_blank" rel="noopener noreferrer">{partner.site}</a>
                     </div>
                   </div>
                   <p className="mt-4 opacity-70 text-sm font-normal line-clamp-4 hover:line-clamp-none transition-all">{partner.descr}</p></div>
