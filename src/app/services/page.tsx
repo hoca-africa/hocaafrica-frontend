@@ -81,7 +81,7 @@ const ServicesPage = () => {
           {services.map((service) => (
             <Card
               key={service.title}
-              className="overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-background"
+              className="overflow-hidden transform transition-all duration-300 hover:scale-105 hover:shadow-xl hover:bg-background border border-border p-3"
             >
               {service.image && (
                 <div className="relative h-[22rem] w-full">
