@@ -1,4 +1,4 @@
-Hoca-Africa
+# Hoca-Africa
 Welcome to Hoca Africa! A modern web application built with Next.js and deployed on Vercel.
 🌐 Live Site
 Visit us at: https://hoca-africa.org
