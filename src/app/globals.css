@@ -37,6 +37,20 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    /* Remove all default blue colors */
+.select__control--is-focused {
+  border-color: inherit !important;
+  box-shadow: inherit !important;
+}
+
+.select__option--is-focused {
+  background-color: #f3f4f6 !important; /* gray-100 */
+}
+
+.select__option--is-selected {
+  background-color: #fef2f2 !important; /* red-50 */
+  color: #030229 !important; /* red-800 */
+}
   }
   .dark {
     --background: 222.2 84% 4.9%;
