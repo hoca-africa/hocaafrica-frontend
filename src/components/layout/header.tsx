@@ -147,7 +147,7 @@ export default function Navbar() {
             </div>
           </div>
           <div className="hidden md:flex">
-            <Button asChild className='font-semibold text-base gap-2'><Link href="https://www.every.org/home-care-alliance-africa-hoca-a" target="_blank"
+            <Button asChild className='font-semibold text-base gap-2'><Link href="https://www.every.org/home-care-alliance-africa-hoca-a?donateTo=home-care-alliance-africa-hoca-a#/donate/card" target="_blank"
               rel="noopener noreferrer"><TiHeartOutline className='font-semibold' />Donate</Link></Button>
           </div>
 
@@ -247,7 +247,7 @@ export default function Navbar() {
               <button className="join-btn"><Link href="/join-us">Join Us</Link></button>
             </div>
             <div className="block">
-              <Button asChild className='font-semibold text-base gap-2'><Link href="https://www.every.org/home-care-alliance-africa-hoca-a" target="_blank"
+              <Button asChild className='font-semibold text-base gap-2'><Link href="https://www.every.org/home-care-alliance-africa-hoca-a?donateTo=home-care-alliance-africa-hoca-a#/donate/card" target="_blank"
                 rel="noopener noreferrer"><TiHeartOutline className='font-semibold' />Donate</Link></Button>
             </div>
           </div>
