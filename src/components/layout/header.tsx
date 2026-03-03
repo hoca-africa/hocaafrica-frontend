@@ -6,7 +6,9 @@ import Image from 'next/image';
 import { X, Menu } from 'lucide-react';
 import LogoImg from "../../assets/images/logos/logo_hocaa.png";
 import "./header.css";
-import { TiArrowSortedDown } from "react-icons/ti";
+import { TiArrowSortedDown, TiHeartOutline } from "react-icons/ti";
+import { Button } from '../ui/button';
+
 
 export default function Navbar() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -32,7 +34,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-white border-b border-gray-200 shadow-sm text-[#030229]">
+    <nav className="sticky top-0 z-50 w-full bg-white border-b border-gray-200 shadow-sm text-[#030229] py-4">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
@@ -144,6 +146,10 @@ export default function Navbar() {
               <button className="join-btn"><Link href="/join-us">Join Us</Link></button>
             </div>
           </div>
+          <div className="hidden md:flex">
+            <Button asChild className='font-semibold text-base gap-2'><Link href="https://www.every.org/home-care-alliance-africa-hoca-a" target="_blank"
+              rel="noopener noreferrer"><TiHeartOutline className='font-semibold' />Donate</Link></Button>
+          </div>
 
           {/* Mobile Menu Button */}
           <button
@@ -239,6 +245,10 @@ export default function Navbar() {
             </Link>
             <div className="block">
               <button className="join-btn"><Link href="/join-us">Join Us</Link></button>
+            </div>
+            <div className="block">
+              <Button asChild className='font-semibold text-base gap-2'><Link href="https://www.every.org/home-care-alliance-africa-hoca-a" target="_blank"
+                rel="noopener noreferrer"><TiHeartOutline className='font-semibold' />Donate</Link></Button>
             </div>
           </div>
         )}

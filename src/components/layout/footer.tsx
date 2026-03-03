@@ -1,9 +1,14 @@
-'use client'
+"use client";
 
 import Link from "next/link";
 import Image from "next/image";
 import LogoImg from "../../assets/images/logos/logo_hocaa.png";
-import { BsWhatsapp, BsTwitterX, BsInstagram, BsEnvelopeAt } from "react-icons/bs";
+import {
+  BsWhatsapp,
+  BsTwitterX,
+  BsInstagram,
+  BsEnvelopeAt,
+} from "react-icons/bs";
 import { BiLogoLinkedin } from "react-icons/bi";
 import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 import { SlLocationPin } from "react-icons/sl";
@@ -24,10 +29,10 @@ export function Footer() {
                 />
               </Link>
             </div>
-            <p className="opacity-90 text-lg font-normal ">
-              HOCA-A creates a future of compassionate, reliable, and dignified
-              care for every older person. We are building Africa’s care
-              economy—one caregiver, one family, one community at a time.
+            <p className="opacity-90 text-[16.6px] font-normal !leading-7 ">
+              Home care Alliance Africa (HOCA-A) is a registered non-profit in
+              Uganda and is fiscally sponsored in the USA as a 501c(3)
+              non-profit by MyriadUSA(EIN582277856)
             </p>
           </div>
           <div>
@@ -36,23 +41,32 @@ export function Footer() {
             </h3>
             <ul className="space-y-4 text-[16px]">
               <li>
-                <Link href="/about" className=" hover:text-primary font-normal flex gap-2">
-                  < MdOutlineKeyboardDoubleArrowRight size={20} /> About Us
+                <Link
+                  href="/about"
+                  className=" hover:text-primary font-normal flex gap-2"
+                >
+                  <MdOutlineKeyboardDoubleArrowRight size={20} /> About Us
                 </Link>
               </li>
               <li>
-                <Link href="/services" className=" hover:text-primary  flex gap-2">
-                  < MdOutlineKeyboardDoubleArrowRight size={20} />  Our Services
+                <Link
+                  href="/services"
+                  className=" hover:text-primary  flex gap-2"
+                >
+                  <MdOutlineKeyboardDoubleArrowRight size={20} /> Our Services
                 </Link>
               </li>
               <li>
                 <Link href="/blog" className="hover:text-primary  flex gap-2">
-                  < MdOutlineKeyboardDoubleArrowRight size={20} />  Blog
+                  <MdOutlineKeyboardDoubleArrowRight size={20} /> Blog
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-primary  flex gap-2">
-                  < MdOutlineKeyboardDoubleArrowRight size={20} /> Contact
+                <Link
+                  href="/contact"
+                  className="hover:text-primary  flex gap-2"
+                >
+                  <MdOutlineKeyboardDoubleArrowRight size={20} /> Contact
                 </Link>
               </li>
             </ul>
@@ -113,7 +127,8 @@ export function Footer() {
           </div>
           <div>
             <p>
-              &copy; {new Date().getFullYear()} Hoca-africa. All rights reserved.
+              &copy; {new Date().getFullYear()} Hoca-africa. All rights
+              reserved.
             </p>
           </div>
           <div className="flex space-x-4">
