@@ -11,7 +11,7 @@ import { MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
 const DonorPage = (props: any) => {
   return (
     <div className="bg-[#EFF3ED]">
-      <div className="container py-[20rem] sm:py-24 text-[#030229]">
+      <div className="container py-16 sm:py-24 text-[#030229]">
         {/* Back Button */}
         <button
           onClick={props.handleBackToCards}
@@ -83,7 +83,7 @@ const DonorPage = (props: any) => {
           <div className="flex justify-end my-4">
             <button className="text-white bg-[#c39c1d] hover:bg-background hover:text-[#c39c1d] border-[1.5px] border-[#c39c1d] px-6 py-3 rounded-lg text-xl font-semibold transition-all duration-300">
               <Link
-                href="https://www.every.org/home-care-alliance-africa-hoca-a?donateTo=home-care-alliance-africa-hoca-a#/donate/card"
+                href="https://www.every.org/home-care-alliance-africa-hoca-a"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2"
