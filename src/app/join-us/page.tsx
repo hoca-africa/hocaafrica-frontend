@@ -227,7 +227,7 @@ const JoinUsPage = () => {
                   key={type.id}
                   onClick={() => handleCardClick(type.id)}
                   style={{
-                    backgroundImage: "url('/images/joinbg.png')",
+                    backgroundImage: "url('/images/abtimg')",
                     backgroundSize: "cover",
                     backgroundPosition: "center",
                     backgroundRepeat: "no-repeat",

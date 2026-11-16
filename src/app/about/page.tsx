@@ -1,6 +1,5 @@
 "use client";
 import Image from "next/image";
-import { Users, Clock, Building, Rocket } from "lucide-react";
 import ForElders from "../../assets/images/forelders.png";
 import { IoIosCheckmarkCircle } from "react-icons/io";
 import CeoImg from "../../assets/images/team/ceo.png";
