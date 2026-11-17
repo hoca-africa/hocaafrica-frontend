@@ -120,15 +120,15 @@ export default function LandingPage() {
                 <div className="hero-container">
                     <div className="hero-content">
                         <h1 className="hero-title">
-                            Transforming Elder  <span className="text-[#8b0000]">Care Across Africa</span>
+                            Transforming Home{" "}<span className="text-[#8b0000]">Care Across Africa</span>
                         </h1>
                         <p className="hero-subtitle">
-                            Uniting governments, providers, and partners to build trusted standards and professional
-                            caregiving systems for elders and families—rooted in African values and guided by global
-                            standards.
+                            Advancing quality, accessible and sustainable home care
+                            through advocacy, professional development, collaboration
+                            and innovation.
                         </p>
                         <Link href="/join-us" className="cta-button">
-                            <span>Join Us Today</span>
+                            <span>Get Involved</span>
                             <span className="arrow">→</span>
                         </Link>
                     </div>
